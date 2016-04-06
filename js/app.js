@@ -60,6 +60,6 @@ function hashchanged(){
 }
 
 $(document).ready(function(){
-    //$.material.init();
+    $.material.init();
 
 });
