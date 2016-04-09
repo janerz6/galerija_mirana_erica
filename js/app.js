@@ -60,6 +60,7 @@ function hashchanged(){
 }
 
 $(document).ready(function(){
+    //Init bootstrap material design
     $.material.init();
 
 });
