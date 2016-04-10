@@ -1,49 +1,48 @@
 <div class="basicGalleryPage">
+
     <div class="row" style="height:15vh"></div>
     <div class="row">
-        <div class="sider col-md-1 col-sm-2 col-md-offset-2 col-sm-12 col-sm-offset-0">
+
+        <div class="sider col-md-1 col-sm-2 col-md-offset-2 col-sm-12 col-sm-offset-0 centerFlex">
+            <div>
             {{#each imageList}}
-            <div class="siderItem col-sm-12 col-xs-2">
-                <a href="{{this.fileName}}">
-                    <img src="./images/small/{{this.fileName}}.{{this.fileExt}}" width="100%" height="100%"/>
-                </a>
-            </div>
+                <div class="siderItem col-sm-12 col-xs-2">
+                    <a href="{{this.fileName}}">
+                        <img src="./images/small/{{this.fileName}}.{{this.fileExt}}" width="100%" height="100%"/>
+                    </a>
+                </div>
             {{/each}}
-        </div>
-        <div class="col-md-6 col-sm-8">
-            <div class="col-md-12 imgContainer" >
-                <img src="./images/small/RibaRaca.png" width="100%" height="100%"/>
             </div>
-            <div class="col-md-12 galleryBasicImgDescription" >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ac ornare eros, quis pretium sapien. In
-                laoreet ac
-                orci non aliquet. Duis convallis ante quis nisi ornare, sodales porta ante tincidunt. Vestibulum
-                ultricies
-                in
-                velit non rutrum. Pellentesque feugiat nibh vel mi venenatis, vitae varius mauris pellentesque. Sed
-                magna
-                nisl,
-                posuere at nisl tempus, porttitor placerat nisl. Etiam rhoncus, nibh et semper imperdiet, sapien nibh
-                lobortis
-                diam, sed dignissim nisl sapien a lacus. Aliquam eros lacus, scelerisque ac justo porta, convallis
-                gravida
-                velit. Morbi id purus sed mi finibus iaculis vel sit amet lacus. Curabitur sollicitudin efficitur
-                libero,
-                sed
-                eleifend felis feugiat vitae. Fusce sed odio molestie, porta nulla id, placerat nibh. Nunc eget ligula
-                orci.
-                Quisque cursus finibus nibh, eleifend tincidunt leo luctus eget. Fusce sed est accumsan, interdum nunc
-                pharetra,
-                maximus massa. In dolor lorem, semper sed sem at, vehicula efficitur arcu.
+        </div>
+
+        <div class="col-md-6 col-sm-8">
+            <div class="col-md-12 imgContainer">
+                <img src="./images/small/{{selectedImg.fileName}}.{{selectedImg.fileExt}}"/>
+            </div>
+            <div class="col-md-12 galleryBasicImgDescription">
+                <div class="col-md-6">
+                    {{selectedImg.titleSi}}<br/><br/>
+                    {{selectedImg.sizeAndTechniqueSi}}<br/><br/>
+                    {{selectedImg.descriptionSi}}<br/><br/>
+                </div>
+                <div class="col-md-6">
+                    {{selectedImg.titleEn}}<br/><br/>
+                    {{selectedImg.sizeAndTechniqueEn}}<br/><br/>
+                    {{selectedImg.descriptionEn}}
+                </div>
+
+
                 <div class="interviewLink">
                     <a href="./#interview">#Intervju</a>
                 </div>
             </div>
         </div>
+
         <div class="col-md-2 col-sm-4">
             <div class="btn-group-sm">
-                <div class="btn mdb-btn-fab btn-info" id="toggleViewType"><i class="material-icons">pageview</i></div>
-                <a href="./" class="btn mdb-btn-fab btn-info"><i class="material-icons">home</i></a>
+                <div class="btn mdb-btn-fab btn-gray" id="toggleViewType"><i class="material-icons">pageview</i>
+                </div>
+                <a href="./" class="btn mdb-btn-fab btn-gray"><i class="material-icons">home</i></a>
             </div>
             <div id="viewsMenu" class="btn-group-vertical" style="width:100%; display:none" data-toggle="buttons">
                 <label class="btn btn-raised">
@@ -53,5 +52,7 @@
                 <a href="./#galleryDouble" class="btn btn-raised">Dvojni pogled</a>
             </div>
         </div>
+
     </div>
+
 </div>

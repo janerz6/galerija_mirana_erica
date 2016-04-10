@@ -58,7 +58,7 @@ function hashchanged(){
             testRenderedTemplate = testCompiledTemplate({city: "Ljubljana", number: "3",street:"Prešernova ulica"});
             break;
         case 'galleryBasic':
-            testRenderedTemplate = testCompiledTemplate({imageList:data.images});
+            testRenderedTemplate = testCompiledTemplate({imageList:data.images,selectedImg:data.images[3]});
             break;
         default :
             testRenderedTemplate = testCompiledTemplate();

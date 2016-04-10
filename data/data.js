@@ -7,12 +7,19 @@ var data = {
         {
             fileName: 'Labod',
             fileExt: 'png',
-            title:`Miran Erič
-            Leda z labodom / Leda and the Swan
+            titleSi:`Miran Erič
+            Leda z labodom
             1988
             `,
-            sizeAndTechnique:`410 x 277 cm:  4 deli / 4 pieces
-            Platno, akril / Canvas, acrylic
+            titleEn:`Miran Erič
+            Leda and the Swan
+            1988
+            `,
+            sizeAndTechniqueSi:`410 x 277 cm:  4 deli 
+            Platno, akril
+            `,
+            sizeAndTechniqueEn:`410 x 277 cm:  4 pieces
+            Canvas, acrylic
             `,
             descriptionSi:`Vsem slikam iz tega časa so enotna izhodišča, ki so me takrat vznemirjala:
             Raziskave kaosa v 19. stoletju, fraktalna geometrija, smisel mandal in paradoks, ki ga je v slikarstvu najbolj ekspicitno prikazal M.C. Esher …
