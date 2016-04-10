@@ -48,10 +48,24 @@ function hashchanged(){
         search = getParameter('search');
 
     }
-    var testCompiledTemplate = Handlebars.getTemplate(hash);
 
-    //Render the data into the template
-    var testRenderedTemplate = testCompiledTemplate({city: "Ljubljana", number: "3",street:"Prešernova ulica"});
+    var testCompiledTemplate = testCompiledTemplate = Handlebars.getTemplate(hash);;
+    var testRenderedTemplate;
+
+    //Fill necessary data and render it to a template
+    switch(hash) {
+        case 'interview':
+            testRenderedTemplate = testCompiledTemplate({city: "Ljubljana", number: "3",street:"Prešernova ulica"});
+            break;
+        case 'galleryBasic':
+            testRenderedTemplate = testCompiledTemplate({imageList:data.images});
+            break;
+        default :
+            testRenderedTemplate = testCompiledTemplate();
+            break;
+    }
+
+
 
     //Overwrite the contents of #target with the renderer HTML
     document.getElementById('app-content').innerHTML = testRenderedTemplate;
@@ -67,9 +81,6 @@ $(document).ready(function(){
 });
 
 function registerEvents(){
-    $("#toggleViewType").click(function(){
-        $("#viewsMenu").slideToggle();
-    });
 
     // about author click
     $("#detail").click(function(){
@@ -87,4 +98,15 @@ function registerEvents(){
             paddingTop: "15%"
         }, 2000);
     });
+
+    /* basic gallery page */
+
+    $("#toggleViewType").click(function(){
+        $("#viewsMenu").slideToggle();
+    });
+
+    $(".siderItem a").click(function(e){
+        e.preventDefault();
+        return false;
+    })
 }

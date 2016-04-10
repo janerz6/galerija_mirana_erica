@@ -1,22 +1,42 @@
 /* Main gallery page */
 @bela : #ffffff;
+@crna : #000000;
+@indexHeaderRedColor : #dc211c;
 
+body,#app-content{
+  min-height: 100vh;
+  width: 100%;
+}
 .basicGalleryPage {
+  background-image: url("../images/backgrounds/betonZid.png");
+  background-repeat: repeat;
+  min-height: 100vh;
   .row {
     padding: 0;
     margin: 0;
   }
   .siderItem {
-    padding: 5px 0;
+    padding: 5px 0px;
   }
   .btn {
     white-space: normal;
+    background: @bela;
+  }
+  .btn-red{
+    background-color: @indexHeaderRedColor !important;
   }
   .interviewLink {
     padding: 5px 0;
   }
   .galleryBasicImgDescription {
+    margin-top:10px;
     padding: 30px;
+    background: rgba(0,0,0,0.8);
+    color: @bela;
+    border-radius: 2vw;
+  }
+  .active{
+      opacity: 0.6;
   }
 }
 
@@ -33,7 +53,7 @@
     color: @bela;
     text-align: center;
     text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
-    background-color: #dc211c;
+    background-color: @indexHeaderRedColor;
     opacity: 0.9;
     filter: alpha(opacity=90); /* For IE8 and earlier */
   }
