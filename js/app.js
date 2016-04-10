@@ -70,7 +70,7 @@ function registerEvents(){
     $("#toggleViewType").click(function(){
         $("#viewsMenu").slideToggle();
     });
-}
+
     // about author click
     $("#detail").click(function(){
         $("#bs-body").show(500);
@@ -87,4 +87,4 @@ function registerEvents(){
             paddingTop: "15%"
         }, 2000);
     });
-});
+}
