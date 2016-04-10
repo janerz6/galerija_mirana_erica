@@ -1,0 +1,16 @@
+.row{
+    padding: 0;
+    margin: 0;
+}
+.siderItem{
+    padding: 5px 0;
+}
+.btn{
+    white-space: normal;
+}
+.interviewLink{
+    padding: 5px 0;
+}
+.galleryBasicImgDescription{
+    padding: 30px;
+}

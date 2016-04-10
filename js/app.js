@@ -55,12 +55,19 @@ function hashchanged(){
 
     //Overwrite the contents of #target with the renderer HTML
     document.getElementById('app-content').innerHTML = testRenderedTemplate;
-    if(search !== null)
+
+    registerEvents();
+    if(search !== null && document.getElementById(search))
         document.getElementById(search).scrollIntoView();
 }
 
 $(document).ready(function(){
     //Init bootstrap material design
-    $.material.init();
-
+    //s$.material.init();
 });
+
+function registerEvents(){
+    $("#toggleViewType").click(function(){
+        $("#viewsMenu").slideToggle();
+    });
+}
