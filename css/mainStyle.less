@@ -1,6 +1,6 @@
 /* Main gallery page */
-@bela : #ffffff;
-@crna : #000000;
+@white : #ffffff;
+@black : #000000;
 @indexHeaderRedColor : #dc211c;
 
 body,#app-content{
@@ -8,9 +8,11 @@ body,#app-content{
   width: 100%;
 }
 .basicGalleryPage {
+
   background-image: url("../images/backgrounds/betonZid.png");
   background-repeat: repeat;
   min-height: 100vh;
+
   .row {
     padding: 0;
     margin: 0;
@@ -20,7 +22,7 @@ body,#app-content{
   }
   .btn {
     white-space: normal;
-    background: @bela;
+    background: @white;
   }
   .btn-red{
     background-color: @indexHeaderRedColor !important;
@@ -28,12 +30,17 @@ body,#app-content{
   .interviewLink {
     padding: 5px 0;
   }
+  .imgContainer{
+    height: 50vh;
+    padding: 0 !important;
+  }
   .galleryBasicImgDescription {
-    margin-top:10px;
-    padding: 30px;
+    margin-top: 1vh;
+    padding: 15px;
     background: rgba(0,0,0,0.8);
-    color: @bela;
-    border-radius: 2vw;
+    box-shadow: 4px 5px 2px @black;
+    color: @white;
+    border-radius: 1vw;
   }
   .active{
       opacity: 0.6;
@@ -50,7 +57,7 @@ body,#app-content{
     position: relative;
     padding: 1%;
     width: 100%;
-    color: @bela;
+    color: @white;
     text-align: center;
     text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
     background-color: @indexHeaderRedColor;
@@ -63,7 +70,7 @@ body,#app-content{
     position: relative;
     width: 100%;
     padding: 2%;
-    color: @bela;
+    color: @white;
     background-color: #333333;
     opacity: 0.95;
     filter: alpha(opacity=95); /* For IE8 and earlier */
@@ -73,7 +80,7 @@ body,#app-content{
     position: relative;
     width: 100%;
     padding: 2%;
-    color: @bela;
+    color: @white;
     background-color: #333333;
     opacity: 0.95;
     filter: alpha(opacity=95); /* For IE8 and earlier */
@@ -101,7 +108,7 @@ body,#app-content{
   }
 
   .btn {
-    color: @bela;
+    color: @white;
   }
 
   .p {
