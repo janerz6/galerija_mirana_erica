@@ -6,7 +6,7 @@ body {
 
 .bs-header{
     position:relative;
-    padding: 2%;
+    padding: 1%;
     width: 100%;
     color:#ffffff;
     text-align:center;
@@ -16,7 +16,8 @@ body {
     filter: alpha(opacity=90); /* For IE8 and earlier */
 }
 
-.bs-body{
+#bs-body{
+    display: none;
     position:relative;
     width: 100%;
     padding: 2%;
@@ -24,6 +25,27 @@ body {
     background-color:#333333;
     opacity: 0.95;
     filter: alpha(opacity=95); /* For IE8 and earlier */
+}
+
+#bs-tail{
+    position:relative;
+    width: 100%;
+    padding: 2%;
+    color:#ffffff;
+    background-color:#333333;
+    opacity: 0.95;
+    filter: alpha(opacity=95); /* For IE8 and earlier */
+}
+
+.img-circle {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+}
+
+.pbody {
+    display:table-cell;
+    vertical-align:middle;
 }
 
 #main {
@@ -42,30 +64,30 @@ body {
     transform: translateY(-50%);
 }
 
-.mask {
-    width: 100%;
-    height: 100%;
-    opacity: 0.8;
-    filter: alpha(opacity=80);
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.48);
-}
-
-.image {
-    zoom: 2;
-
-    display: block;
-    margin: auto;
-
-    height: auto;
-    max-height: 100%;
-
-    width: auto;
-    max-width: 100%;
+img.bg {
+    min-width:100%;
+    position:inherit;
+    min-height:70% !important; /* browser fill */
+    height:auto;                /*content fill */
 }
 
 .btn {
     color: #ffffff;
+}
+
+.p {
+    margin-top: 5px;
+}
+
+#hide {
+    margin-left: 50%;
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+}
+
+#hide:hover {
+    -moz-box-shadow: 0 0 10px #ccc;
+    -webkit-box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 0 10px #ccc;
 }

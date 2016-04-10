@@ -60,7 +60,21 @@ function hashchanged(){
 }
 
 $(document).ready(function(){
-    //Init bootstrap material design
-    $.material.init();
 
+    // about author click
+    $("#detail").click(function(){
+        $("#bs-body").show(500);
+        $("#bs-tail").hide(500);
+        $("#main").animate({
+            paddingTop: "5%"
+        }, 2000);
+    });
+
+    $("#hide").click(function(){
+        $("#bs-body").hide(200);
+        $("#bs-tail").show(500);
+        $("#main").animate({
+            paddingTop: "15%"
+        }, 2000);
+    });
 });
