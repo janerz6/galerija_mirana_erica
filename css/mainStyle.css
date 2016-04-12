@@ -15,15 +15,19 @@ body,
 }
 .basicGalleryPage .centerFlex {
   display: flex;
-  align-items: center;
+  /*align-items: center;*/
   justify-content: center;
 }
 .basicGalleryPage .sider {
-  background: rgba(0, 0, 0, 0.8);
-  padding-top: 5px;
+  padding: 0;
+}
+.basicGalleryPage .sider > div {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px 5px;
   border: 3px solid #000000;
+  border-top: none;
+  border-bottom: none;
   border-radius: 3px;
-  padding-bottom: 5px;
 }
 .basicGalleryPage .siderItem {
   padding: 5px 0px;
@@ -49,7 +53,7 @@ body,
   max-width: 100%;
   max-height: 100%;
   padding: 0 !important;
-  box-shadow: 4px 5px 2px #000000;
+  /*box-shadow: 4px 5px 2px @black;*/
 }
 .basicGalleryPage .galleryBasicImgDescription {
   margin-top: 1vh;
@@ -147,4 +151,24 @@ img.firstPageTplBg {
   /* browser fill */
   height: auto;
   /*content fill */
+}
+/* Interview */
+.interviewPage .indexContainer {
+  position: fixed;
+}
+.interviewPage .indexContainer ul {
+  list-style: none;
+}
+.interviewPage .indexContainer ul li {
+  padding: 3px 0;
+}
+.interviewPage .indexContainer ul li:hover {
+  cursor: pointer;
+  border-left: 3px solid #000000;
+  padding-left: 5px;
+}
+@media screen and (max-width: 992px) {
+  .interviewPage .indexContainer {
+    position: static;
+  }
 }

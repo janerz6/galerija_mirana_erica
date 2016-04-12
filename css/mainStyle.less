@@ -22,15 +22,19 @@ body, #app-content {
   }
   .centerFlex{
     display: flex;
-    align-items: center;
+    /*align-items: center;*/
     justify-content: center;
   }
   .sider{
-    background: @transparentBlack;
-    padding-top: 5px;
-    border:3px solid @black;
-    border-radius: 3px;
-    padding-bottom: 5px;
+    padding: 0;
+    > div{
+      background-color: @transparentBlack;
+      padding: 10px 5px;
+      border:3px solid @black;
+      border-top:none;
+      border-bottom:none;
+      border-radius: 3px;
+    }
   }
   .siderItem {
     padding: 5px 0px;
@@ -55,7 +59,7 @@ body, #app-content {
       max-width: 100%;
       max-height: 100%;
       padding: 0 !important;
-      box-shadow: 4px 5px 2px @black;
+      /*box-shadow: 4px 5px 2px @black;*/
     }
   }
 
@@ -161,4 +165,28 @@ img.firstPageTplBg {
   position: inherit;
   min-height: 70% !important; /* browser fill */
   height: auto; /*content fill */
+}
+
+/* Interview */
+
+.interviewPage {
+  .indexContainer{
+    position:fixed;
+    ul {
+      list-style: none;
+    }
+    ul li{
+      padding: 3px 0;
+    }
+    ul li:hover{
+      cursor: pointer;
+      border-left: 3px solid @black;
+      padding-left: 5px;
+    }
+  }
+  @media screen and (max-width: 992px){
+    .indexContainer{
+      position:static;
+    }
+  }
 }

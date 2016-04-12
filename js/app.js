@@ -55,7 +55,7 @@ function hashchanged(){
     //Fill necessary data and render it to a template
     switch(hash) {
         case 'interview':
-            testRenderedTemplate = testCompiledTemplate({city: "Ljubljana", number: "3",street:"Prešernova ulica"});
+            testRenderedTemplate = testCompiledTemplate({data:data.interview});
             break;
         case 'galleryBasic':
             testRenderedTemplate = testCompiledTemplate({imageList:data.images,selectedImg:data.images[3]});
