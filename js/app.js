@@ -1,6 +1,15 @@
 /**
  * Created by Janez on 31.3.2016.
  */
+var innerZoomConfig = {
+    zoomType: "inner",
+    cursor: "crosshair",
+    zoomWindowFadeIn: 500,
+    zoomWindowFadeOut: 750,
+    responsive:true
+};
+var selectedImageIdx = 3;
+var innerZoomActive = false;
 
 //Function that loads templates
 Handlebars.getTemplate = function(name) {
@@ -40,12 +49,13 @@ function getParameter(p) {
 };
 
 function hashchanged(){
+
     var search = null;
     if(window.location.hash === '')
         hash = 'fullscreen';
     else {
         var hash = location.hash.replace(/^#/, '');
-        search = getParameter('search');
+        //search = getParameter('search');
 
     }
 
@@ -58,35 +68,29 @@ function hashchanged(){
             testRenderedTemplate = testCompiledTemplate({data:data.interview});
             break;
         case 'galleryBasic':
-            testRenderedTemplate = testCompiledTemplate({imageList:data.images,selectedImg:data.images[0]});
+            testRenderedTemplate = testCompiledTemplate({imageList:data.images,selectedImg:data.images[selectedImageIdx]});
             break;
         default :
             testRenderedTemplate = testCompiledTemplate();
             break;
     }
 
-
-
     //Overwrite the contents of #target with the renderer HTML
     document.getElementById('app-content').innerHTML = testRenderedTemplate;
 
-    registerEvents();
     if(search !== null && document.getElementById(search))
         document.getElementById(search).scrollIntoView();
+
+    registerEvents();
+
 }
 
 $(document).ready(function(){
+
     //Init bootstrap material design
     //s$.material.init();
-    var zoomConfig = {
-        zoomType: "inner",
-        cursor: "crosshair",
-        zoomWindowFadeIn: 500,
-        zoomWindowFadeOut: 750,
-        responsive:true
-    };
-    $('#zoom').elevateZoom(zoomConfig);
-    //$.removeData(image, 'elevateZoom');
+    
+
 
 });
 

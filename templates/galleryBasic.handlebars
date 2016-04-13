@@ -1,13 +1,13 @@
 <div class="basicGalleryPage">
 
-    <div class="row" style="height:15vh"></div>
+    <div class="row" style="height:5vh"></div>
     <div class="row">
 
         <div class="sider col-md-1 col-sm-2 col-md-offset-2 col-sm-12 col-sm-offset-0 centerFlex">
             <div>
             {{#each imageList}}
                 <div class="siderItem col-sm-12 col-xs-2">
-                    <a href="{{this.fileName}}">
+                    <a href="{{this.fileName}}" data-imgId="{{@index}}">
                         <img
                              src="./images/small/{{this.fileName}}.{{this.fileExt}}"
                              width="100%"
@@ -51,7 +51,7 @@
                 <a href="./" class="btn mdb-btn-fab btn-gray"><i class="material-icons">home</i></a>
             </div>
             <div id="viewsMenu" class="btn-group-vertical" style="width:100%; display:none" data-toggle="buttons">
-                <label class="btn btn-raised">
+                <label class="btn btn-raised" id="toggleZoom">
                     <input type="checkbox" autocomplete="off"/>Zoom
                 </label>
                 <a href="./#fullscreen" class="btn btn-raised">Celozaslonski pogled</a>
@@ -60,8 +60,7 @@
         </div>
 
     </div>
-
-    <script>
-
-    </script>
 </div>
+<script>
+
+</script>
