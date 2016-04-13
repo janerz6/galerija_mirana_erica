@@ -58,7 +58,7 @@ function hashchanged(){
             testRenderedTemplate = testCompiledTemplate({data:data.interview});
             break;
         case 'galleryBasic':
-            testRenderedTemplate = testCompiledTemplate({imageList:data.images,selectedImg:data.images[3]});
+            testRenderedTemplate = testCompiledTemplate({imageList:data.images,selectedImg:data.images[0]});
             break;
         default :
             testRenderedTemplate = testCompiledTemplate();
@@ -78,5 +78,15 @@ function hashchanged(){
 $(document).ready(function(){
     //Init bootstrap material design
     //s$.material.init();
+    var zoomConfig = {
+        zoomType: "inner",
+        cursor: "crosshair",
+        zoomWindowFadeIn: 500,
+        zoomWindowFadeOut: 750,
+        responsive:true
+    };
+    $('#zoom').elevateZoom(zoomConfig);
+    //$.removeData(image, 'elevateZoom');
+
 });
 

@@ -8,7 +8,10 @@
             {{#each imageList}}
                 <div class="siderItem col-sm-12 col-xs-2">
                     <a href="{{this.fileName}}">
-                        <img src="./images/small/{{this.fileName}}.{{this.fileExt}}" width="100%" height="100%"/>
+                        <img
+                             src="./images/small/{{this.fileName}}.{{this.fileExt}}"
+                             width="100%"
+                             height="100%"/>
                     </a>
                 </div>
             {{/each}}
@@ -17,7 +20,10 @@
 
         <div class="col-md-6 col-sm-8">
             <div class="col-md-12 imgContainer">
-                <img src="./images/small/{{selectedImg.fileName}}.{{selectedImg.fileExt}}"/>
+                <img id="zoom"
+                     src="./images/small/{{selectedImg.fileName}}.{{selectedImg.fileExt}}"
+                     data-zoom-image="./images/large/{{selectedImg.fileName}}.{{selectedImg.fileExt}}"
+                />
             </div>
             <div class="col-md-12 galleryBasicImgDescription">
                 <div class="col-md-6">
@@ -55,4 +61,7 @@
 
     </div>
 
+    <script>
+
+    </script>
 </div>
