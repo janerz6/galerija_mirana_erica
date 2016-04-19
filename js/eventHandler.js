@@ -57,14 +57,13 @@ function registerEvents(){
     });
 
     $("#back").on('click',function(){
-        $('#itw').hide(500);
-        $('.interviewPage').hide(500,  function () {
-            window.location.href = "./"
+        $('img.interviewPageTplBg').show(1000, function () {
+            history.go(-1);
         });
     });
 
     $(document).ready( function(){
-        $('.interviewPage').animate({paddingTop: "0%"}, 2000);
+        $('img.interviewPageTplBg').hide(2000);
     });
 
 }

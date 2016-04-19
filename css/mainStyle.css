@@ -170,9 +170,16 @@ img.firstPageTplBg {
   /*content fill */
 }
 /* Interview */
+img.interviewPageTplBg {
+  min-width: 100%;
+  min-height: 70% !important;
+  /* browser fill */
+  max-height: 100%;
+  height: auto;
+  /*content fill */
+}
 .interviewPage {
   width: 100%;
-  padding-top: 15%;
   /*background-image: url("../images/backgrounds/betonZid.png");*/
 }
 .interviewPage p {
