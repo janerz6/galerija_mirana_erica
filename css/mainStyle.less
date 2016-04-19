@@ -2,18 +2,19 @@
 @white: #ffffff;
 @black: #000000;
 @niceGray: #333333;
+@lightGrey: #e8f5e9;
 @transparentBlack: rgba(0, 0, 0, 0.8);
 @indexHeaderRedColor: #dc211c;
 
 body, #app-content {
   min-height: 100vh;
+  min-width: 525px;
   width: 100%;
+  background-color: @lightGrey;
 }
 
 
 .basicGalleryPage {
-  background-image: url("../images/backgrounds/betonZid.png");
-  background-repeat: repeat;
   min-height: 100vh;
 
   .row {
@@ -84,6 +85,15 @@ body, #app-content {
   width: 100%;
   padding-top: 15%;
 
+
+  h1 h3 {
+    font-weight: 100;
+  }
+
+  p {
+    font-weight: 100;
+  }
+
   .bs-header {
     position: relative;
     padding: 1%;
@@ -110,6 +120,7 @@ body, #app-content {
   #bs-tail {
     position: relative;
     width: 100%;
+    max-height: 55%;
     color: @white;
     background-color: @niceGray;
     opacity: 0.95;
@@ -180,38 +191,93 @@ img.firstPageTplBg {
 /* Interview */
 
 .interviewPage {
+  width: 100%;
+  padding-top: 15%;
+
+  p {
+    text-align:justify;
+    font-size: large;
+  }
+
+  h5 {
+    text-align:justify;
+  }
+
+  .bs-header {
+    position: fixed;
+    padding: 1%;
+    width: 100%;
+    color: @white;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+    background-color: @indexHeaderRedColor;
+    z-index: 2;
+  }
+
+  .bback {
+    height: 200000px;
+    min-height: 100%;
+    padding-top: 7%;
+    padding-left: 2%;
+    color: @white;
+    background-color: @niceGray;
+    opacity: 0.95;
+    filter: alpha(opacity=95); /* For IE8 and earlier */
+
+    a {
+      color: @lightGrey;
+      font-size: medium;
+    }
+
+  }
+
+  .wback {
+    padding-top: 5%;
+    background-color: @white;
+    opacity: 0.95;
+    filter: alpha(opacity=95); /* For IE8 and earlier */
+  }
+
+
   /*background-image: url("../images/backgrounds/betonZid.png");*/
   .indexContainer{
     position:fixed;
-    font-size: 80%;
+    font-size: 100%;
+
     ul {
       list-style: none;
+      align-content: center;
 
-      li{
-        padding: 3px 0;
+      li {
+        text-align:justify;
       }
+
       li:hover{
         cursor: pointer;
-        border-left: 3px solid @black;
-        padding-left: 5px;
+        border-left: 5px solid @indexHeaderRedColor;
       }
       li.active{
-        padding-left: 10px;
-        border-left: 3px solid @black !important;
-        font-weight: bolder;
+        border-left: 5px solid @white !important;
+        font-weight: 600;
+        text-decoration: none;
       }
     }
 
   }
-  @media screen and (max-width: 992px){
-    .indexContainer{
-      position:static;
 
-    }
+  #back {
+    align-items: baseline;
+    z-index: 1;
+    margin-left: -50%;
+    position: fixed;
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
   }
-  @media screen and (max-width: 1500px){
-    .indexContainer{
-      font-size: 80%;
-    }
+
+  #back:hover {
+    -moz-box-shadow: 0 0 10px #ccc;
+    -webkit-box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 0 10px #ccc;
   }
 }
