@@ -55,5 +55,16 @@ function registerEvents(){
 
         window.scrollTo(0, $($(this).attr("href")).position().top);
     });
-   
+
+    $("#back").on('click',function(){
+        $('#itw').hide(500);
+        $('.interviewPage').hide(500,  function () {
+            window.location.href = "./"
+        });
+    });
+
+    $(document).ready( function(){
+        $('.interviewPage').animate({paddingTop: "0%"}, 2000);
+    });
+
 }
