@@ -3,11 +3,33 @@ body,
 #app-content {
   min-height: 100vh;
   width: 100%;
+  font-size: 110%;
 }
 .basicGalleryPage {
   background-image: url("../images/backgrounds/betonZid.png");
   background-repeat: repeat;
   min-height: 100vh;
+}
+.basicGalleryPage .btn-raised {
+  font-size: 120%;
+}
+.basicGalleryPage #topPadding {
+  height: 5vh;
+}
+.basicGalleryPage .icons {
+  font-size: 300%;
+}
+.basicGalleryPage .chevron {
+  font-size: 400%;
+  position: absolute;
+  top: calc(50% - 40px);
+  display: inline-block;
+}
+.basicGalleryPage .chevron:hover {
+  cursor: pointer;
+}
+.basicGalleryPage #image {
+  cursor: pointer;
 }
 .basicGalleryPage .row {
   padding: 0;
@@ -44,14 +66,15 @@ body,
   padding: 5px 0;
 }
 .basicGalleryPage .imgContainer {
-  height: 50vh;
+  vertical-align: center;
+  height: 65vh;
   text-align: center;
 }
 .basicGalleryPage .imgContainer img {
-  height: auto;
-  width: auto;
   max-width: 100%;
   max-height: 100%;
+  height: auto;
+  width: auto;
   padding: 0 !important;
   /*box-shadow: 4px 5px 2px @black;*/
 }

@@ -30,23 +30,46 @@ function registerEvents(){
     $("#toggleZoom").on('click',function(){
         if(!innerZoomActive) {
             innerZoomActive = true;
-            $('#zoom').elevateZoom(innerZoomConfig);
+            $('#image').elevateZoom(innerZoomConfig);
         }
         else {
             innerZoomActive = false;
-            $.removeData($("#zoom"), 'elevateZoom');
+            $.removeData($("#image"), 'elevateZoom');
         }
         console.log('innerZoomActive:',innerZoomActive);
     });
 
-    $(".basicGalleryPage .siderItem a").on('click',function(e){
+    $("#nextImgBtn").on('click',function(e){
         e.preventDefault();
-        //console.log($(this).data("imgid"));
-        selectedImageIdx = $(this).data("imgid");
+        selectedImageIdx = (selectedImageIdx + 1) % (data.images.length);
+        //Trigger redraw
+        $(window).trigger("hashchange");
+    });
+    $("#prevImgBtn").on('click',function(e){
+        e.preventDefault();
+        selectedImageIdx = (selectedImageIdx - 1)
+        if(selectedImageIdx === 0)
+            selectedImageIdx = (data.images.length - 1);
         //Trigger redraw
         $(window).trigger("hashchange");
     });
 
+    $("#fullscreen, #image").on('click',function(){
+
+
+        if(!fullscreenMode){
+            $("#imgContainer").animate({height:'90vh'},1500);
+            //$("#prevImgBtn").animate({position:'fixed !important',top:'50%',left:'2%'},1500);
+            //$("#nextImgBtn").animate({position:'fixed !important',top:'50%',right:'2%'},1500);
+        }
+        else{
+            $("#imgContainer").animate({height:'65vh'},1500);
+        }
+
+        fullscreenMode = !fullscreenMode;
+        $("#viewsMenu").slideToggle(1500);
+        $(".galleryBasicImgDescription").slideToggle(1500);
+    });
     /* Interview */
     $('.interviewPage .indexContainer a').on('click',function(e){
         e.preventDefault();

@@ -8,8 +8,9 @@ var innerZoomConfig = {
     zoomWindowFadeOut: 750,
     responsive:true
 };
-var selectedImageIdx = 3;
+var selectedImageIdx = 1;
 var innerZoomActive = false;
+var fullscreenMode = false;
 
 //Function that loads templates
 Handlebars.getTemplate = function(name) {

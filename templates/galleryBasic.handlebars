@@ -1,42 +1,45 @@
 <div class="basicGalleryPage">
 
-    <div class="row" style="height:5vh"></div>
+    <div class="row topPadding" id="topPadding"></div>
     <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 col-sm-8">
 
-        <div class="sider col-md-1 col-sm-2 col-md-offset-2 col-sm-12 col-sm-offset-0 centerFlex">
-            <div>
-            {{#each imageList}}
-                <div class="siderItem col-sm-12 col-xs-2">
-                    <a href="{{this.fileName}}" data-imgId="{{@index}}">
-                        <img
-                             src="./images/small/{{this.fileName}}.{{this.fileExt}}"
-                             width="100%"
-                             height="100%"/>
-                    </a>
-                </div>
-            {{/each}}
-            </div>
-        </div>
-
-        <div class="col-md-6 col-sm-8">
-            <div class="col-md-12 imgContainer">
-                <img id="zoom"
+            <div class="col-md-12 imgContainer" id="imgContainer">
+                <i class="material-icons chevron" id="prevImgBtn">chevron_left</i>
+                <img id="image"
                      src="./images/small/{{selectedImg.fileName}}.{{selectedImg.fileExt}}"
-                     data-zoom-image="./images/large/{{selectedImg.fileName}}.{{selectedImg.fileExt}}"
+                     data-zoom-image="./images/small/{{selectedImg.fileName}}.{{selectedImg.fileExt}}"
+                     height="auto"
+                     width="100%"
                 />
+                <i class="material-icons chevron" id="nextImgBtn">chevron_right</i>
             </div>
+
             <div class="col-md-12 galleryBasicImgDescription">
-                <div class="col-md-6">
-                    {{selectedImg.titleSi}}<br/><br/>
-                    {{selectedImg.sizeAndTechniqueSi}}<br/><br/>
-                    {{selectedImg.descriptionSi}}<br/><br/>
+                <div class="col-md-12">
+                    <h2>{{selectedImg.titleSi}}</h2>
+                    <div style="padding:0">
+                        <b>{{selectedImg.authur}}</b> ({{selectedImg.year}})
+                    </div>
+                    <div style="padding:15px 0">
+                        <i>
+                            {{selectedImg.sizeSi}}<br/>
+                            {{selectedImg.techniqueSi}}
+                        </i>
+                    </div>
+                    <div style="padding: 10px 0">
+                        {{selectedImg.descriptionSi}}
+                    </div>
+
                 </div>
+                <!--
                 <div class="col-md-6">
                     {{selectedImg.titleEn}}<br/><br/>
                     {{selectedImg.sizeAndTechniqueEn}}<br/><br/>
                     {{selectedImg.descriptionEn}}
                 </div>
-
+                -->
 
                 <div class="interviewLink">
                     <a href="./#interview">#Intervju</a>
@@ -46,17 +49,24 @@
 
         <div class="col-md-2 col-sm-4">
             <div class="btn-group-sm">
-                <div class="btn mdb-btn-fab btn-gray" id="toggleViewType"><i class="material-icons">pageview</i>
+                <div class="btn btn-gray" id="toggleViewType"><i class="material-icons icons">pageview</i>
                 </div>
-                <a href="./" class="btn mdb-btn-fab btn-gray"><i class="material-icons">home</i></a>
+                <div class="btn btn-gray">
+                    <i class="material-icons icons">home</i>
+                </div>
+                <div class="btn btn-gray">
+                    <i class="material-icons icons">fullscreen</i>
+                </div>
             </div>
+            <!--
             <div id="viewsMenu" class="btn-group-vertical" style="width:100%; display:none" data-toggle="buttons">
                 <label class="btn btn-raised" id="toggleZoom">
                     <input type="checkbox" autocomplete="off"/>Zoom
                 </label>
-                <a href="./#fullscreen" class="btn btn-raised">Celozaslonski pogled</a>
+                <a id="fullscreen" href="./#fullscreen" class="btn btn-raised">Celozaslonski pogled</a>
                 <a href="./#galleryDouble" class="btn btn-raised">Dvojni pogled</a>
             </div>
+            -->
         </div>
 
     </div>

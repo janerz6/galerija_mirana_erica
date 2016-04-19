@@ -7,20 +7,14 @@ var data = {
             {
                 fileName: 'Labod',
                 fileExt: 'png',
-                titleSi: `Miran Erič
-            Leda z labodom
-            1988
-            `,
-                titleEn: `Miran Erič
-            Leda and the Swan
-            1988
-            `,
-                sizeAndTechniqueSi: `410 x 277 cm:  4 deli 
-            Platno, akril
-            `,
-                sizeAndTechniqueEn: `410 x 277 cm:  4 pieces
-            Canvas, acrylic
-            `,
+                authur:'Miran Erič',
+                year:'1988',
+                titleSi: `Leda z labodom`,
+                titleEn: 'Leda and the Swan',
+                sizeSi: '410 x 277 cm:  4 deli',
+                sizeEn: '410 x 277 cm:  4 pieces',
+                techniqueSi: 'Platno, akril',
+                techniqueEn: 'Canvas, acrylic',
                 descriptionSi: `Vsem slikam iz tega časa so enotna izhodišča, ki so me takrat vznemirjala:
             Raziskave kaosa v 19. stoletju, fraktalna geometrija, smisel mandal in paradoks, ki ga je v slikarstvu najbolj ekspicitno prikazal M.C. Esher …
             `,
@@ -33,13 +27,14 @@ var data = {
             {
                 fileName: 'pismenke',
                 fileExt: 'png',
-                title: ` Miran Erič
-            Svet / World
-            1988
-            `,
-                sizeAndTechnique: `400 x 300 cm (preveriti): 12 delov / 12 pieces
-            Olje, steklo, plastika, plastelin / Oil, glass, plastic, plasticine
-            `,
+                authur:'Miran Erič',
+                year:'1988',
+                titleSi: 'Svet',
+                titleEn: 'World',
+                sizeSi: '400 x 300 cm (preveriti): 12 delov',
+                sizeEn: '400 x 300 cm (check): 12 pieces',
+                techniqueSi: 'Olje, steklo, plastika, plastelin ',
+                techniqueEn: 'Oil, glass, plastic, plasticine',
                 descriptionSi: 'Pred nastankom slike sem skoraj dva meseca potoval po Kitajski. ' +
                 'Poln vtisov in spoznanja o naši majhnosti in "majhnosti" v naših glavah, sem naslikal Svet.',
                 descriptionEn: 'Just before I created this painting I traveled two months in China. ' +
@@ -49,13 +44,14 @@ var data = {
             {
                 fileName: 'RibaRaca',
                 fileExt: 'png',
-                title: ` Miran Erič
-            Riba reže raci rep / Fish cuts duck’s tail
-            1987
-            `,
-                sizeAndTechnique: `351 x 301 cm: 25 delov / 25 pieces
-            Iverna plošča, olje / Particle board, oil
-            `,
+                authur:'Miran Erič',
+                year:'1987',
+                titleSi: 'Riba reže raci rep',
+                titleEn: 'Fish cuts duck’s tail',
+                sizeSi: '351 x 301 cm: 25 delov',
+                sizeEn: '351 x 301 cm: 25 pieces',
+                techniqueSi: 'Iverna plošča, olje',
+                techniqueEn: 'Particle board, oil',
                 descriptionSi: ` Čas v katerem so slike nastajale je bi turbolenten in osvobajajoč.
             Izjemna pozitivna energija, ki je v 80’ naplavila množico alternativnih gibanj,
             močan razcvet umetniških dejavnosti in preizpraševanje o družbi in njenih prepovedanih temah,
@@ -73,13 +69,14 @@ var data = {
             {
                 fileName: 'Zirafa',
                 fileExt: 'png',
-                title: `Miran Erič
-            Žirafa / Giraffe 
-            1991
-            `,
-                sizeAndTechnique: `200 x 400 cm: 3 deli / 3 pieces
-            Platno, kolaž, akril: organski materiali, tkanina, pesek, lepilo / Canvas, collage, acrylic: organic materials, fabric, sand, glue
-            `,
+                authur:'Miran Erič',
+                year:'1991',
+                titleSi: 'Žirafa',
+                titleEn: 'Giraffe',
+                sizeSi: `200 x 400 cm: 3 deli`,
+                sizeEn: `200 x 400 cm: 3 pieces`, 
+                techniqueSi: `Platno, kolaž, akril: organski materiali, tkanina, pesek, lepilo`,
+                techniqueEn: `Canvas, collage, acrylic: organic materials, fabric, sand, glue`,
                 descriptionSi: `Prav proti koncu slikanja, ko sem še imel na razpolago atelje, sem domislil serijo slik, ki bi upodabljale živali:
              žirafa je bila prva od teh. Ideja serije pa je bila, da bi bile slike živali v merilu približno 1:1.
              Samice žiraf zrastejo do višine okoli 4 - 5 m. Samci pa tudi do 6 m.
