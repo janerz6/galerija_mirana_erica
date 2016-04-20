@@ -5,6 +5,7 @@
 @lightGrey: #e8f5e9;
 @transparentBlack: rgba(0, 0, 0, 0.8);
 @indexHeaderRedColor: #dc211c;
+@yellow: #ECDF00;
 
 body, #app-content {
   min-height: 100vh;
@@ -84,6 +85,7 @@ body, #app-content {
   position: fixed;
   width: 100%;
   padding-top: 15%;
+  font-family: inherit;
 
 
   h1 h3 {
@@ -161,6 +163,12 @@ body, #app-content {
     letter-spacing:  normal;
     margin-bottom: auto;
     font-size: inherit;
+  }
+
+  .btn:hover {
+    background-color: @yellow;
+    opacity: 0.95;
+    filter: alpha(opacity=95); /* For IE8 and earlier */
   }
 
   .p {

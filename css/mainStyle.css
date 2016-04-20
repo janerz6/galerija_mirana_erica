@@ -73,6 +73,7 @@ body,
   position: fixed;
   width: 100%;
   padding-top: 15%;
+  font-family: inherit;
 }
 .firstPageTpl h1 h3 {
   font-weight: 100;
@@ -144,6 +145,12 @@ body,
   letter-spacing: normal;
   margin-bottom: auto;
   font-size: inherit;
+}
+.firstPageTpl .btn:hover {
+  background-color: #ECDF00;
+  opacity: 0.95;
+  filter: alpha(opacity=95);
+  /* For IE8 and earlier */
 }
 .firstPageTpl .p {
   margin-top: 5px;
