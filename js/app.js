@@ -11,6 +11,7 @@ var innerZoomConfig = {
 var selectedImageIdx = 1;
 var innerZoomActive = false;
 var fullscreenMode = false;
+var language = true;
 
 //Function that loads templates
 Handlebars.getTemplate = function(name) {
@@ -31,7 +32,6 @@ Handlebars.getTemplate = function(name) {
 
 //Basic routing
 $(function(){
-
     // Bind the event.
     $(window).on('hashchange',hashchanged);
 
@@ -69,7 +69,7 @@ function hashchanged(){
             testRenderedTemplate = testCompiledTemplate({data:data.interview});
             break;
         case 'galleryBasic':
-            testRenderedTemplate = testCompiledTemplate({imageList:data.images,selectedImg:data.images[selectedImageIdx]});
+            testRenderedTemplate = testCompiledTemplate({imageList:data.images,selectedImg:data.images[selectedImageIdx],language: (language)?"SI":"EN"});
             break;
         default :
             testRenderedTemplate = testCompiledTemplate();
@@ -90,7 +90,6 @@ $(document).ready(function(){
 
     //Init bootstrap material design
     //s$.material.init();
-    
 
 
 });

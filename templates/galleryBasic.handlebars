@@ -1,9 +1,27 @@
 <div class="basicGalleryPage">
-
+    <div class="bs-header">
+        <div class="row">
+            <div class="col-md-1">
+                <a href="./" class="btn btn-transparent">
+                    <i class="material-icons icons">home</i>
+                </a>
+            </div>
+            <div class="col-md-10">
+                <h2>{{selectedImg.titleSi}}</h2>
+                ({{selectedImg.year}})
+            </div>
+            <div class="col-md-1">
+                {{language}}
+                <div class="btn btn-transparent">
+                    <i class="material-icons icons">language</i>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="row topPadding" id="topPadding"></div>
     <div class="row">
         <div class="col-md-2"></div>
-        <div class="col-md-8 col-sm-8">
+        <div class="col-md-8 col-xs-12">
 
             <div class="col-md-12 imgContainer" id="imgContainer">
                 <i class="material-icons chevron" id="prevImgBtn">chevron_left</i>
@@ -13,64 +31,42 @@
                      height="auto"
                      width="100%"
                 />
-                <i class="material-icons chevron" id="nextImgBtn">chevron_right</i>
+                <i class="material-icons chevron" id="nextImgBtn" >chevron_right</i>
             </div>
 
-            <div class="col-md-12 galleryBasicImgDescription">
-                <div class="col-md-12">
-                    <h2>{{selectedImg.titleSi}}</h2>
-                    <div style="padding:0">
-                        <b>{{selectedImg.authur}}</b> ({{selectedImg.year}})
-                    </div>
-                    <div style="padding:15px 0">
-                        <i>
-                            {{selectedImg.sizeSi}}<br/>
-                            {{selectedImg.techniqueSi}}
-                        </i>
-                    </div>
-                    <div style="padding: 10px 0">
-                        {{selectedImg.descriptionSi}}
-                    </div>
+          <!-- <div class="col-md-12 galleryBasicImgDescription">
 
-                </div>
-                <!--
-                <div class="col-md-6">
-                    {{selectedImg.titleEn}}<br/><br/>
-                    {{selectedImg.sizeAndTechniqueEn}}<br/><br/>
-                    {{selectedImg.descriptionEn}}
-                </div>
-                -->
-
-                <div class="interviewLink">
-                    <a href="./#interview">#Intervju</a>
-                </div>
-            </div>
+            </div>-->
         </div>
-
         <div class="col-md-1 col-sm-4">
             <div class="btn-group-sm">
-                <div class="btn btn-gray" id="toggleZoom"><i class="material-icons icons">pageview</i>
+                <div class="btn btn-gray" id="toggleZoom">
+                    <i class="material-icons icons">pageview</i>
                 </div>
                 <div class="btn btn-gray" id="fullscreen">
                     <i class="material-icons icons">fullscreen</i>
                 </div>
-                <div class="btn btn-gray">
-                    <i class="material-icons icons">home</i>
-                </div>
             </div>
-            <!--
-            <div id="viewsMenu" class="btn-group-vertical" style="width:100%; display:none" data-toggle="buttons">
-                <label class="btn btn-raised" id="toggleZoom">
-                    <input type="checkbox" autocomplete="off"/>Zoom
-                </label>
-                <a id="fullscreen" href="./#fullscreen" class="btn btn-raised">Celozaslonski pogled</a>
-                <a href="./#galleryDouble" class="btn btn-raised">Dvojni pogled</a>
-            </div>
-            -->
-        </div>
 
+        </div>
+    </div>
+    <div class="bs-footer">
+        <div class="row">
+            <div class="col-md-12">
+                <div style="padding:15px 0">
+                    <i>{{selectedImg.sizeSi}}</i><br/>
+                    {{selectedImg.techniqueSi}}
+
+                </div>
+                <div style="padding: 10px 0">
+                    {{selectedImg.descriptionSi}}
+                </div>
+
+            </div>
+
+            <div class="interviewLink">
+                <a href="./#interview">#Intervju</a>
+            </div>
+        </div>
     </div>
 </div>
-<script>
-
-</script>

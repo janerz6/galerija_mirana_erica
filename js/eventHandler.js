@@ -10,14 +10,14 @@ function moveBtns() {
     var btnWidth = $("#prevImgBtn").width();
     //console.log(left + " " + right);
     var h = top + height / 2 - btnHeight / 2;
-    $("#prevImgBtn").css({left: left - btnWidth, position: 'absolute !important', top: h});
-    $("#nextImgBtn").css({left: right, position: 'absolute !important', top: h});
+    $("#prevImgBtn").css({left: left - btnWidth * 3 / 4, position: 'absolute !important', top: h});
+    $("#nextImgBtn").css({left: right - btnWidth * 1 / 4, position: 'absolute !important', top: h});
 }
 
 function toggleFullscreen(tm) {
     var time = tm || 1200;
     if (!fullscreenMode) {
-        $("#imgContainer").animate({height: '95vh'}, time);
+        $("#imgContainer").animate({height: '90vh'}, time);
         //$("#prevImgBtn").animate({position:'fixed !important',top:'50%',left:'2%'},1500);
         //$("#nextImgBtn").animate({position:'fixed !important',top:'50%',right:'2%'},1500);
     }
@@ -25,7 +25,8 @@ function toggleFullscreen(tm) {
         $("#imgContainer").animate({height: '65vh'}, time);
     }
     fullscreenMode = !fullscreenMode;
-    $("#viewsMenu").slideToggle(1500);
+
+    $(".bs-header").slideToggle(time);
     $(".galleryBasicImgDescription").slideToggle(time);
 
     var count = 0;
@@ -81,10 +82,10 @@ function registerEvents() {
             selectedImageIdx = (selectedImageIdx + 1) % (data.images.length);
             //Trigger redraw
             $(window).trigger("hashchange");
-            toggleFullscreen(2);
+            toggleFullscreen(1);
 
         }
-        else{
+        else {
             selectedImageIdx = (selectedImageIdx + 1) % (data.images.length);
             //Trigger redraw
             $(window).trigger("hashchange");
