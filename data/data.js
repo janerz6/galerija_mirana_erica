@@ -97,13 +97,6 @@ var data = {
 
             parts: {
                 0: {
-                    title: 'Uvod', content: `
-                Akademski slikar, mag. Miran Erič je fakulteti podaril svoja umetniška dela, ki novi zgradbi dodajo posebni pridih značilen za galerijske prostore.
-                Mag. Miran Erič  je dodiplomski študij končal na Akademiji za likovno umetnost v Ljubljani, magistrski pa na Filozofski fakulteti v Ljubljani, na oddelku za arheologijo. Zaposlen je na Zavodu za varstvo kulturne dediščine Slovenije in skrbi za zaščito podvodne dediščine, na študijski smeri Heritologija na Filozofski fakulteti pa zaključuje doktorat iz področja uporabe slikovnega jezika v arheologiji. Ker je tematika močno povezana tudi z računalništvom in informatiko je njegov somentor, ob doc. dr. Dimitriju Mlekužu in doc. dr. Jelki Pirkovič, tudi prof. dr. Franc Solina iz Laboratorija za računalniški vid.
-                Z mag. Miranom Eričem smo se pogovarjali o njegovem delu in vključitvi svojih del v našo novo stavbo.
-                `
-                },
-                1: {
                     title: '1.	Veseli nas, da ste nam podarili slike, ki dajejo stavbi poseben čar.  ' +
                     'Kako je prišlo do ideje, da vaša umetniška dela umestite v takšno zgradbo kot je nova fakulteta FRI?' +
                     '  Se vam zdi, da je kakšna povezava med računalništvom in vašim slikarstvom, najdete  kakšne vzporednice?',
@@ -120,7 +113,7 @@ var data = {
             
                     `
                 },
-                2: {
+                1: {
                     title: '2.	Kakšni so naslovi slik in kako bi vsako posamezno sliko opisali?'
                     , content: `
                     V veznem hodniku Fakultete za računalništvo in informatiko je v drugem nadstropju južnega krila razstavljena slika Svet iz leta 1988. Sestavljena je iz 12 delov , naslikana na platno z oljem, dodatek pa je še steklen kozarec za marmelado v katerem se nahaja zemlja iz plastelina.
@@ -138,13 +131,13 @@ var data = {
                     Tudi ta slika ima družbeno angažirano ozadje. Kot sin koroške slovenke iz Slovenjega Plajperga nad Borovljami sva z bratom skoraj vse počitnice v otroštvu preživela na Koroškem. Naše življenje je tako bilo (še vedno je) globoko prepleteno tudi s sorodniki in prijatelji na severni strani Karavank. Takrat sem spoznal tudi dve krasni, predvsem pa zelo veliki družini Tratar iz Pliberka, bilo jih je 13 otrok in družino Štiker iz Šentjakoba v Rožni dolini, kjer je bilo 10 otrok. Obe družini je vezalo druženje Rozi Tratarjeve in Marjana Štikra, oba 10 otroka v družini. Oba sta bila močno družbeno angažirana, saj je preživetje koroških slovencev nuja v tem prostoru. Naj navedem, da se je od plebiscita leta 1920 asimiliralo že skoraj 90% prebivalcev. Grozljivo dejstvo, ki tako zavednim slovencem dobesedno že v zibelko položi tudi borbenost in subtilno družbeno angažiranost. Marjan in Rozi sta prav takrat v Šentjakobu pripravljala angažiran koncert njihovega pevskega zbora. Tema koncerta pa je bila predstaviti revolucionarne in borbene pesmi zatiranih narodov kot naprimer, slovencev v Italiji in Avstriji, andaluzijcev, kirgizov, baskov, valoncev, ciganov, čečenov, kurdov itd. Naslov angažiranega nastopa je bil ”Ponižani in razžaljeni”, mene pa sta prosila, kar mi je bilo v veliko čast, če bi lahko izdelal odrsko opremo za ozadje zbora. Takrat sem na ogromno rjuho, mislim, da je bila velika 7 x 5 metrov, naslikal množico obrazov, vsakega z nekaterimi tipičnimi potezami posameznih narodov in simboli s katerimi se identificirajo, kot nek vezni člen, pa sem po vsej velikosti površine prepletel še kitajski simbol Jin-Jang. Takrat je v Sloveniji le redko kdo dobro poznal razmere v katerih živijo zatirani narodi …
                      `
                 },
-                3: {
+                2: {
                     title: '3.	Ali ste pri umestitvi slik v prostor imeli kaj posebnega v mislih?',
                     content: `        
                     Ne, nič nisem pričakoval! Le po tolikih letih - čas od trenutka, ko sem se zavezal umetnosti, leta 1981, do danes, ko so po spletu okoliščin platna vendarle našla svoje mesto – sem presenečen in vzhičen! Če gledam za nazaj (retrogardno)  se mi dozdeva dogajanje samoumevno! Če pa se prestavim za skoraj 30 let nazaj, in bi dogajanje opazoval v prihodnost, se mi zdi skoraj neverjetno! Tako smo ponovno v paradoksu, ki sem ga že takrat ponudil kot neko vizijo, najbolj izrazito v sliki  Riba reže raci rep in sliki, ki ji dela družbo Leda z labodom. Tudi mesto Žirafe v jedilnici ima neko posebno sporočilo, da ne govorim o Ponižanih in razžaljenih, ki so se, nekako samoumevno, znašli v sejni sobi dekanata Fakultete za računalništvo in informatiko. Vse, kar mi danes pride na misel je, da imam občutek, da so zaradi nekega posebnega logičnega zaporedja v času, arhitekti predvideli prostor za te slike  (!?) .... Kako in zakaj, me, prosim, ne spraševati! Nisem vernik in nisem slep! Le dogodki kažejo na zaporedne nize, za katere nimam razlage. Ali ima teorija o fraktalih, še zlasti pa teorija kaosa in njena preprosta, vendar zgovorna slikovna upodobitev, animacija dvojnega nihala palice, kakšno posebno vlogo pri teh konkretnih razpletih, ne bi vedel. Zelo verjetno pa so na to vplivali vstopni pogoji!? Morda je to znanstveno vprašanje za prihodnje rodove!
                     `
                 },
-                4: {
+                3: {
                     title: '4.	Ali vam je katera izmed slik še posebej pri srcu in zakaj?',
                     content: `
                     To seveda niso edine slike, ki sem jih “naslikal“. Svojo ustvarjalnost, tukaj namenoma izločam besedo “produkcija“, saj izrazito podpira kapitalistična izhodišča – nikoli nisem vezal na eksistenčno preživetje. 
@@ -153,7 +146,7 @@ var data = {
                     Te, ki so razstavljene in so edine, ki jih tudi sam kot slikar, podpisujem, so moje najljubše! Manjka samo še grafika (mešana tehnika sitotisk in litografija), naslov je: ”Lep dan je, toda vojna je! / It is a nice day, but it is a war!«, ki sem jo naredil leta 1987 na grafični delavnici v Nordenu, v Friziji na severu Nemčije. Tja me je “vzel” s seboj, takrat moj profesor in odlični učitelj slikarske tehnologije, učenec profesorice Vide Hudoklin, prof. dr. Franci Curk. To je ena od pomembnih oseb, ki so se pojavile v mojem življenju in pomembno oblikovale moje življenje. Franci Curk je s svojimi nasveti in pogovori zaslužen za moje današnje življenje, saj mi je prav on, potem, ko sem podvomil, da bi se lahko s slikanjem preživel, svetoval študij konserviranja mokrega lesa. Vsa čast sodobnikom, torej profesorjem, ki danes krojijo novodobno slikarsko miselnost (in so tudi dovolj prepoznavni zaradi svojega dela ali medijske pozornosti), sam pa zagotovo ne bi želel pozabiti nekaterih spregledanih, vendar za mnoge generacije na likovni akademiji, zelo pomembnih učiteljev. Zame mednje ob Vidi Hudoklin in Franciju Curku zagotovo sodi tudi slikarski tehnolog in imeniten mentor Momo Klašnja. Tudi pogovori z njim in njegove izkušnje se na nek način zrcalijo v mojih slikah.
                      `
                 },
-                5: {
+                4: {
                     title: '5.	Koliko so vredne vaše slike? ',
                     content: `
                     Zame so neprecenljive! Vendar je tukaj dobro biti normalno ozemljen. Za večino slikarjev, tako kot tudi znanstvenih raziskovalcev, inovatorjev, izumiteljev in tudi množice drugih, ki prispevajo k napredku se zdi, da so njihovi prispevki podcenjeni in slabo vrednoteni ... 
@@ -165,7 +158,7 @@ var data = {
                     Tudi moje slike so bile še pred enim mesecem povsem brez vrednosti.
                     `
                 },
-                6: {
+                5: {
                     title: '6.	Kaj vas navdihuje pri vašem delu? Ali bi lahko rekli, da tudi vaš doktorat z obravnavo slikovnega jezika v arheologiji lahko vpliva na vaše umetniške ideje?'
                     , content: `
                      Interdisciplinarna prepletenost znanosti, umetnosti in družbe. To me najbolj vznemirja, saj je mogoče zakonitosti iz enega področja zlahka prenesti v drugega. Vse se prepleta. V 30 letih delovanja je to bilo na nek način zame precej težje, saj smo pri razumevanju, predvsem pa sprejemanju interdisciplinarnih diskurzov zelo togi in jih ozko zamejene skupine zelo težko sprejemajo. Če se ne bi že ves čas gibal med umetnostjo, znanostjo in humanističnimi praksami, bi najbrž nikoli ne mogel povezati toliko različnih temeljev, ki oblikujejo mojo idejo o “lingvističnem” pomenu in karakterju pojavnosti slike, ki je bila najkasneje leta 1998, ko je termin ”Visual language” nesporno predstavil Robert E. Horn kot množico gradnikov, ki jo lahko povežemo pod skupni imenovalec ”slikovni jezik” z vsemi lingvističnimi pravili o strukturi, kakršna so semiotika, ontologija, semantika, morfologija, sintaksa idr. ki pomenijo temeljno ogrodje jezika. Tak značaj vsega kar vidimo, je žal v tisočletjih bil spregledan, lingvistična pravila pa se le pogojno selijo tudi na ”druge” jezike. Tako so danes splošno sprejeti npr. programski jezik, matematični jezik, znakovni jezik, glasbeni jezik. Opredelitvi slikovnega jezika pa se pravzaprav vsi izogibajo in tudi če se ta termin uporabi, je ta omejen bolj na področje slikovnih (vizualnih) umetnosti. Torej splošnega konsenza o enakovrednem pomenu slikovnega jezika drugim jezikom, ni.   
@@ -175,13 +168,13 @@ var data = {
                     Kot vidite, je moje delo globoko prepleteno, tako na eno kot tudi na drugo stran.
                     `
                 },
-                7: {
+                6: {
                     title: '7.	Ali je še kaj takega, kar bi želeli prenesti na platno, pa še niste uspeli?'
                     , content: `        
                     Seveda. Vse od začetka 90', ko nisem več mogel nadaljevati z delom v ateljeju, sem beležil ideje, ki se mi jih zdi vredno uresničiti in so izključno umetniške narave, čeprav prepletene z vso mojo izkušnjo iz znanosti in humanistike. Je pa res, da sem kljub odsotnosti iz platna nekako “pomirjen”, saj sem uspel ostati pri proučevanju in izdelavi slike. Tukaj sicer ne gre za svobodno umetniško izražanje, mi pa slikarska akademska izobrazba še kako koristi pri utemeljevanju slikovnega jezika in gradnji slike na drugih področjih, v mojem primeru v arheologiji in varstvu podvodne kulturne dediščine. Za moje umetniško izražanje je toliko idej, da bi za izvedbo vseh zagotovo potreboval najmanj 20 do 25 let. Vseh najbrž nikoli ne bom mogel uresničiti. Žal. 
                     `
                 },
-                8: {
+                7: {
                     title: '8.	Zanimajo nas tudi vaši načrti za prihodnost. Imate načrtovane kakšne zanimive projekte?'
                     , content: `    
                     Zagotovo je na prvem mestu zaključek študija. To me čaka v bližnji prihodnosti. Sicer pa bi morda res omenil dva, ki se mi sedaj pleteta po glavi. 
@@ -191,10 +184,6 @@ var data = {
                     Projekt sem pravzaprav že skoraj povsem pozabil, dokler ... s kolegi iz podjetja O.K.Vir, ki so namestili slike v fakultetnih prostorih, nismo v garaži na Zavetiški, kjer so slike počivale 23 let, odkrili teh 64 platen...
                     `
                 },
-                9: {
-                    title: 'Zahvala',
-                    content: `Zahvaljujemo se vam za vaš čas in vam želimo uspešno delo tudi naprej.`
-                }
             }
         }
     }
