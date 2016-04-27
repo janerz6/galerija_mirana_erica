@@ -17,12 +17,13 @@ function moveBtns() {
 function toggleFullscreen(tm) {
     var time = tm || 1200;
     if (!fullscreenMode) {
+
         $("#imgContainer").animate({height: '90vh'}, time);
-        //$("#prevImgBtn").animate({position:'fixed !important',top:'50%',left:'2%'},1500);
-        //$("#nextImgBtn").animate({position:'fixed !important',top:'50%',right:'2%'},1500);
+        $("#fullscreenToggleBtn").addClass("active");
     }
     else {
         $("#imgContainer").animate({height: '65vh'}, time);
+        $("#fullscreenToggleBtn").removeClass("active");
     }
     fullscreenMode = !fullscreenMode;
 
@@ -57,54 +58,7 @@ function registerEvents() {
         }, 2000);
     });
 
-    /* basic gallery page */
-    $("#toggleViewType").on('click', function () {
-        $("#viewsMenu").slideToggle();
-    });
-
-    /* Basic gallery */
-    $("#toggleZoom").on('click', function () {
-        if (!innerZoomActive) {
-            innerZoomActive = true;
-            $('#image').elevateZoom(innerZoomConfig);
-        }
-        else {
-            innerZoomActive = false;
-            $.removeData($("#image"), 'elevateZoom');
-        }
-        console.log('innerZoomActive:', innerZoomActive);
-    });
-
-    $("#nextImgBtn").on('click', function (e) {
-        e.preventDefault();
-        if (fullscreenMode) {
-            fullscreenMode = !fullscreenMode;
-            selectedImageIdx = (selectedImageIdx + 1) % (data.images.length);
-            //Trigger redraw
-            $(window).trigger("hashchange");
-            toggleFullscreen(1);
-
-        }
-        else {
-            selectedImageIdx = (selectedImageIdx + 1) % (data.images.length);
-            //Trigger redraw
-            $(window).trigger("hashchange");
-        }
-    });
-    $("#prevImgBtn").on('click', function (e) {
-        e.preventDefault();
-        selectedImageIdx = (selectedImageIdx - 1)
-        if (selectedImageIdx === 0)
-            selectedImageIdx = (data.images.length - 1);
-        //Trigger redraw
-        $(window).trigger("hashchange");
-    });
-
-    $("#fullscreen, #image").on('click', function () {
-        toggleFullscreen();
-    });
-
-    $(window).resize(moveBtns);
+    basicGalleryEvents();
 
     /* Interview */
     $('.interviewPage .indexContainer a').on('click', function (e) {
