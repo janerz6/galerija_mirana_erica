@@ -2,13 +2,16 @@
 @white: #ffffff;
 @black: #000000;
 @niceGray: #333333;
+@lightGrey: #e8f5e9;
 @transparentBlack: rgba(0, 0, 0, 0.8);
 @indexHeaderRedColor: #dc211c;
+@yellow: #ECDF00;
 
 body, #app-content {
   min-height: 100vh;
+  min-width: 525px;
   width: 100%;
-  font-size: 110%;
+  background-color: @lightGrey;
 }
 .btn-transparent{
   background-color: transparent !important;
@@ -38,7 +41,6 @@ body, #app-content {
     font-size: 400%;
     position: absolute;
     z-index: 10;
-    opacity: 0;
   }
   .bs-header {
     position: relative;
@@ -141,6 +143,16 @@ body, #app-content {
   position: fixed;
   width: 100%;
   padding-top: 15%;
+  font-family: inherit;
+
+
+  h1 h3 {
+    font-weight: 100;
+  }
+
+  p {
+    font-weight: 100;
+  }
 
   .bs-header {
     position: relative;
@@ -168,7 +180,7 @@ body, #app-content {
   #bs-tail {
     position: relative;
     width: 100%;
-    padding: 2%;
+    max-height: 55%;
     color: @white;
     background-color: @niceGray;
     opacity: 0.95;
@@ -198,6 +210,23 @@ body, #app-content {
 
   .btn {
     color: @white;
+    line-height: 1.6;
+    min-height: 200px;
+    padding-top: 2.5%;
+    padding-bottom: 2%;
+    white-space: normal;
+    vertical-align: baseline;
+    text-transform: inherit;
+    text-align: left;
+    letter-spacing:  normal;
+    margin-bottom: auto;
+    font-size: inherit;
+  }
+
+  .btn:hover {
+    background-color: @yellow;
+    opacity: 0.95;
+    filter: alpha(opacity=95); /* For IE8 and earlier */
   }
 
   .p {
@@ -227,38 +256,107 @@ img.firstPageTplBg {
 
 /* Interview */
 
+img.interviewPageTplBg {
+  min-width: 100%;
+  min-height: 70% !important; /* browser fill */
+  max-height: 100%;
+  height: auto; /*content fill */
+}
+
 .interviewPage {
+  width: 100%;
+
+  p {
+    text-align:justify;
+    font-size: large;
+  }
+
+  h5 {
+    text-align:justify;
+  }
+
+  .bs-header {
+    position: fixed;
+    padding: 1%;
+    width: 100%;
+    color: @white;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+    background-color: @indexHeaderRedColor;
+    z-index: 2;
+  }
+
+  .bback {
+    height: 200000px;
+    min-height: 100%;
+    padding-top: 7%;
+    padding-left: 2%;
+    color: @white;
+    background-color: @niceGray;
+    opacity: 0.95;
+    filter: alpha(opacity=95); /* For IE8 and earlier */
+
+    a {
+      color: @lightGrey;
+      font-size: medium;
+    }
+
+  }
+
+  .wback {
+    padding-top: 5%;
+    background-color: @white;
+    opacity: 0.95;
+    filter: alpha(opacity=95); /* For IE8 and earlier */
+  }
+
+
   /*background-image: url("../images/backgrounds/betonZid.png");*/
   .indexContainer{
     position:fixed;
-    font-size: 80%;
+    font-size: 100%;
+
     ul {
       list-style: none;
+      align-content: center;
 
-      li{
-        padding: 3px 0;
+      li {
+        text-align:justify;
       }
+
       li:hover{
         cursor: pointer;
-        border-left: 3px solid @black;
-        padding-left: 5px;
+        border-left: 5px solid @indexHeaderRedColor;
       }
       li.active{
-        padding-left: 10px;
-        border-left: 3px solid @black !important;
-        font-weight: bolder;
+        border-left: 5px solid @white !important;
+        font-weight: 600;
+        text-decoration: none;
       }
     }
 
   }
-  @media screen and (max-width: 992px){
-    .indexContainer{
-      position:static;
 
-    }
+  #back {
+    align-items: baseline;
+    z-index: 1;
+    margin-left: -50%;
+    position: fixed;
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
   }
-
+  #back:hover {
+    -moz-box-shadow: 0 0 10px #ccc;
+    -webkit-box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 0 10px #ccc;
+  }
 }
+
+
+
+
+
 @media screen and (max-width: 1500px){
   body, #app-content {
     font-size: 90%;

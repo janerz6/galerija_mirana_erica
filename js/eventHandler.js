@@ -61,12 +61,23 @@ function registerEvents() {
     basicGalleryEvents();
 
     /* Interview */
-    $('.interviewPage .indexContainer a').on('click', function (e) {
+    $('.interviewPage .indexContainer a').on('click',function(e){
         e.preventDefault();
         $(".indexContainer ul li").removeClass("active");
         $(this).parent().addClass("active");
 
-        window.scrollTo(0, $($(this).attr("href")).position().top);
+        window.scrollTo(0, $($(this).attr("href")).position().top - 5);
+    });
+
+    $("#back").on('click',function(){
+        window.scrollTo(0, 0);
+        $('img.interviewPageTplBg').show(1000, function () {
+            history.go(-1);
+        });
+    });
+
+    $(document).ready( function(){
+        $('img.interviewPageTplBg').hide(2000);
     });
 
 }
