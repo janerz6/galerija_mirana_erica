@@ -6,22 +6,22 @@
                     <i class="material-icons icons">home</i>
                 </a>
             </div>
-            <div class="col-md-10">
-                <h2>{{selectedImg.titleSi}}</h2>
-                ({{selectedImg.year}})
+            <div class="col-md-10" style="padding-top:15px">
+                <h3 style="display: inline;"><b>{{selectedImg.titleSi}}</b></h3> <span style="padding-left:0.5em">({{selectedImg.year}})</span>
+
             </div>
-            <div class="col-md-1">
-                {{language}}
+            <div class="col-md-1" style="padding-top:10px">
                 <div class="btn btn-transparent">
-                    <i class="material-icons icons">language</i>
+                    <span style="vertical-align: middle; font-size:21px;">{{language}}</span>
+                    <!--<i class="material-icons icons">language</i>-->
                 </div>
             </div>
         </div>
     </div>
     <div class="row topPadding" id="topPadding"></div>
     <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8 col-xs-12">
+        <div class="col-md-1"></div>
+        <div class="col-md-10 col-xs-12">
 
             <div class="col-md-12 imgContainer" id="imgContainer">
                 <i class="material-icons chevron" id="prevImgBtn">chevron_left</i>
@@ -39,17 +39,17 @@
         </div>
         <div class="col-md-1 col-sm-4">
             <div class="btn-group-sm">
-                <div class="btn btn-gray" id="toggleZoom">
+                <div class="btn" id="toggleZoom">
                     <i class="material-icons icons">pageview</i>
                 </div>
-                <div class="btn btn-gray" id="fullscreenToggleBtn">
+                <div class="btn" id="fullscreenToggleBtn">
                     <i class="material-icons icons">fullscreen</i>
                 </div>
             </div>
 
         </div>
     </div>
-    <div class="bs-footer">
+    <div class="bs-footer galleryBasicImgDescription">
         <div class="row">
             <div class="col-md-12">
                 <div style="padding:15px 0">

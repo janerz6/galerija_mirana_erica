@@ -71,6 +71,9 @@ function hashchanged(){
         case 'galleryBasic':
             testRenderedTemplate = testCompiledTemplate({imageList:data.images,selectedImg:data.images[selectedImageIdx],language: (language)?"SI":"EN"});
             break;
+        case 'galleryDouble':
+            testRenderedTemplate = testCompiledTemplate({images:data.setupImages});
+            break;
         default :
             testRenderedTemplate = testCompiledTemplate();
             break;
@@ -81,7 +84,7 @@ function hashchanged(){
 
     if(search !== null && document.getElementById(search))
         document.getElementById(search).scrollIntoView();
-
+    $(document).add('*').off();
     registerEvents();
 
 }

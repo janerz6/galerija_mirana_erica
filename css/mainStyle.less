@@ -15,6 +15,7 @@ body, #app-content {
 }
 .btn-transparent{
   background-color: transparent !important;
+  color: @white;
 }
 .btn-transparent:hover{
   background-color: @transparentBlack !important;
@@ -32,7 +33,7 @@ body, #app-content {
     font-size: 30%;
   }
   #topPadding{
-    height: 5vh;
+    height: 1vh;
   }
   .icons{
     font-size:300%;
@@ -41,17 +42,21 @@ body, #app-content {
     font-size: 400%;
     position: absolute;
     z-index: 10;
+    opacity: 0;
   }
   .bs-header {
     position: relative;
-    padding: 1%;
+    padding: 3px;
     width: 100%;
     color: @white;
     text-align: center;
     text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
     background-color: @indexHeaderRedColor;
     opacity: 0.9;
+    max-height: 15vh;
     filter: alpha(opacity=90); /* For IE8 and earlier */
+    vertical-align: middle;
+
   }
   .bs-footer {
     position: relative;
@@ -67,6 +72,11 @@ body, #app-content {
   }
   .chevron:hover{
     cursor: pointer;
+  }
+  #toggleZoom,#fullscreenToggleBtn{
+    display: block;
+    background: none;
+    color:@white;
   }
   #image{
     cursor:pointer;
@@ -224,7 +234,8 @@ body, #app-content {
   }
 
   .btn:hover {
-    background-color: @yellow;
+    background-color:  @indexHeaderRedColor;//@yellow;
+    border-radius: 0;
     opacity: 0.95;
     filter: alpha(opacity=95); /* For IE8 and earlier */
   }
@@ -353,7 +364,22 @@ img.interviewPageTplBg {
   }
 }
 
+.setupPage{
+  padding: 3vh;
+  text-align: center;
+  background: @transparentBlack;
+  margin:0;
 
+  img{
+    margin-right:0;
+    height: 40vh;
+    margin: 3px 1px;
+    background: @white;
+  }
+  img:hover{
+    cursor: pointer;
+  }
+}
 
 
 
