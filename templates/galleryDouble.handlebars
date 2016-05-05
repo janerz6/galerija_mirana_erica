@@ -1,5 +1,18 @@
 <div class="setupPage">
+    <div class="doubleHeader">
+        <div class="row">
+            <div class="col-md-1">
+                <a href="./" class="btn btn-transparent">
+                    <i class="material-icons icons">home</i>
+                </a>
+            </div>
+            <div class="col-md-10">
+                <h1>Postavljanje razstave</h1>
+            </div>
+        </div>
+    </div>
     {{#each images}}
-        <img src="./images/setup/{{this}}">
+        <img src="./images/setup/{{this}}" id="setupImage">
     {{/each}}
+    <div class="doubleFooter"></div>
 </div>

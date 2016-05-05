@@ -22,6 +22,7 @@ function registerEvents() {
     });
 
     basicGalleryEvents();
+    doubleGalleryEvents();
 
     /* Interview */
     $('.interviewPage .indexContainer a').on('click',function(e){

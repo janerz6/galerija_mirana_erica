@@ -363,12 +363,45 @@ img.interviewPageTplBg {
     box-shadow: 0 0 10px #ccc;
   }
 }
-
+//setup gallery page named galleryDouble.handlebars
 .setupPage{
-  padding: 3vh;
+
   text-align: center;
   background: @transparentBlack;
   margin:0;
+  position: absolute;
+
+  .doubleHeader{
+    position: relative;
+    width: 100%;
+    max-height: 15vh;
+    background-color: @indexHeaderRedColor;
+    color: @white;
+    text-align: center;
+    vertical-align: middle;
+    margin-bottom: 5vh;
+    //padding:3px;
+  }
+
+  .doubleFooter{
+    height: 5vh;
+    width: 100%;
+    position: relative;
+  }
+
+  .row {
+    padding: 0;
+    margin: 0;
+  }
+
+  .btn {
+    white-space: normal;
+    background-color: @white;
+  }
+
+  .icons{
+    font-size:300%;
+  }
 
   img{
     margin-right:0;
@@ -391,3 +424,4 @@ img.interviewPageTplBg {
     overflow-x:hidden;
   }
 }
+
