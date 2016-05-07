@@ -2,15 +2,29 @@
  * Created by Luka on 4.5.2016.
  */
 
-function doubleGalleryEvents(){
-    /*$("#setupImage").each(function(){
-        $(this).on('click', function(){
-            console.log("ZOOM NA SLIKO");
-            //$(this).width($(this).width()+$(this).width())
-        });
-    });*/
-    $("setupImage").on('click', function(){
-        console.log("Zoom na sliko");
-        alert("Zoom na sliko");
+function doubleGalleryEvents() {
+    //location.reload(true);
+
+    $(".overlayScreen").hide();
+    $(".setupImage").click(function () {
+        showOverlayScreen();
+        var clickedImage = $(this).attr('src');
+        //onsole.log("NASLOV SLIKE: "+clickedImage);
+        $('#shownImage').attr('src', clickedImage);
     });
+
+    $("#exitButton").click(function(){
+        hideOverlayScreen();
+    });
+
+    function showOverlayScreen(){
+        if($(".overlayScreen").is(":hidden")) {
+            $(".overlayScreen").fadeIn(1000);
+        }
+
+    }
+
+    function hideOverlayScreen(){
+        $(".overlayScreen").fadeOut(1000);
+    }
 };
