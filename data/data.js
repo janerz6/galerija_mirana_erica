@@ -82,7 +82,7 @@ var data = {
              Samice žiraf zrastejo do višine okoli 4 - 5 m. Samci pa tudi do 6 m.
              Slika tako predstavlja mlado žirafo …
              Slika miške bi tako bila velika okoli 3 x 5 cm, hrošča pa še manjša …
-             Seveda sem želel naslikat tudi sinjega kita …
+             Seveda sem želel naslikati tudi sinjega kita …
             `,
                 descriptionEn: `Towards the end of my painting period, when I still had a studio at my disposal,
             I envisioned a series of paintings of animals: giraffe was the first of these.
@@ -100,8 +100,8 @@ var data = {
                 year: '1988',
                 titleSi: 'Ponižani in razžaljeni',
                 titleEn: 'Humiliated and dishonored',
-                sizeSi: '550 275 cm: 32 delov',
-                sizeEn: '550 275 cm: 32 pieces',
+                sizeSi: '550 x 275 cm: 32 delov',
+                sizeEn: '550 x 275 cm: 32 pieces',
                 techniqueSi: 'Platno, kolaž: fotokopije, organski materiali, tkanina, pesek',
                 techniqueEn: 'Canvas, collage: photocopies, organic materials, fabric, sand',
                 descriptionSi: 'Slika je nastala ob  sodelovanju avtorja z režiserjem Marjanom Štikrom iz Šentjakoba v Rožu na podlagi istoimenskega koncerta revolucionarnih pesmi zatiranih narodov, ' +
