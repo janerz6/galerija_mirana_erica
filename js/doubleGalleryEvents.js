@@ -2,6 +2,7 @@
  * Created by Luka on 4.5.2016.
  */
 var clickedImage;
+
 function doubleGalleryEvents() {
     //location.reload(true);
 
@@ -10,7 +11,7 @@ function doubleGalleryEvents() {
         showOverlayScreen();
         clickedImage = $(this);
         var addr = clickedImage.attr('src');
-        //onsole.log("NASLOV SLIKE: "+clickedImage);
+        //console.log("INDEX: "+clickedImage.index());
         $('#shownImage').attr('src', addr);
     });
 

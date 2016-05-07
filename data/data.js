@@ -92,6 +92,25 @@ var data = {
             Of course I wanted to painted also a blue whale …
             `
             }
+            ,
+            {
+                fileName: 'celotna_transparent',
+                fileExt: 'png',
+                authur: 'Miran Erič',
+                year: '1988',
+                titleSi: 'Ponižani in razžaljeni',
+                titleEn: 'Humiliated and dishonored',
+                sizeSi: '550 275 cm: 32 delov',
+                sizeEn: '550 275 cm: 32 pieces',
+                techniqueSi: 'Platno, kolaž: fotokopije, organski materiali, tkanina, pesek',
+                techniqueEn: 'Canvas, collage: photocopies, organic materials, fabric, sand',
+                descriptionSi: 'Slika je nastala ob  sodelovanju avtorja z režiserjem Marjanom Štikrom iz Šentjakoba v Rožu na podlagi istoimenskega koncerta revolucionarnih pesmi zatiranih narodov, ' +
+            'kot naprimer, slovencev v Italiji in Avstriji, andaluzijcev, kirgizov, baskov, valoncev, ciganov, čečenov, kurdov … ' +
+            'Takrat je le redko kdo dobro poznal razmere …',
+                descriptionEn: 'The painting is a result of collaboration with the director Marjan Štiker from Šentjakob in Rož valley (Koroška), ' +
+            'based on the concert of the same name of revolutionary songs of oppressed nations such as Slovenians in Italy and Austria, Andalusians, Kyrgyz, Basques, Walloonians, Gypsies, Chechens, Kurds … ' +
+            'At that time in Slovenia very few were familiar with the actual circumstances …',
+            }
         ],
         interview: {
 
