@@ -38,4 +38,11 @@ function registerEvents() {
         history.go(-1);;
     });
 
+
+    $('body').scrollspy({
+        target: '.bs-docs-sidebar',
+        offset: 200
+    });
+
+
 }
