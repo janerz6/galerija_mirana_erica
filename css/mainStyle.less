@@ -13,11 +13,74 @@ body, #app-content {
   width: 100%;
   background-color: @lightGrey;
 }
-
-
+.btn-transparent{
+  background-color: transparent !important;
+  color: @white;
+}
+.btn-transparent:hover{
+  background-color: @transparentBlack !important;
+  color: @white;
+}
 .basicGalleryPage {
+  /*background-image: url("../images/backgrounds/betonZid.png");
+  background-repeat: repeat;*/
+  background-color: @transparentBlack;
   min-height: 100vh;
+  .btn-raised{font-size: 120%};
+  .changeModeBtn{
+    position: absolute;
+    right: 0;
+    font-size: 30%;
+  }
+  #topPadding{
+    height: 1vh;
+  }
+  .icons{
+    font-size:300%;
+  }
+  .chevron{
+    font-size: 400%;
+    position: absolute;
+    z-index: 10;
+    opacity: 0;
+  }
+  .bs-header {
+    position: relative;
+    padding: 3px;
+    width: 100%;
+    color: @white;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+    background-color: @indexHeaderRedColor;
+    opacity: 0.9;
+    max-height: 15vh;
+    filter: alpha(opacity=90); /* For IE8 and earlier */
+    vertical-align: middle;
 
+  }
+  .bs-footer {
+    position: relative;
+    padding: 1%;
+    width: 100%;
+    color: @white;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+    background-color: @transparentBlack;
+    opacity: 0.9;
+    filter: alpha(opacity=90); /* For IE8 and earlier */
+    margin-top: 30px;
+  }
+  .chevron:hover{
+    cursor: pointer;
+  }
+  #toggleZoom,#fullscreenToggleBtn{
+    display: block;
+    background: none;
+    color:@white;
+  }
+  #image{
+    cursor:pointer;
+  }
   .row {
     padding: 0;
     margin: 0;
@@ -51,29 +114,34 @@ body, #app-content {
   }
   .interviewLink {
     padding: 5px 0;
+    position: absolute;
+    right: 30px;
+    top: 10px;
+
   }
   .imgContainer {
-    height: 50vh;
+    vertical-align: center;
+    height: 65vh;
     text-align: center;
     img{
-      height: auto;
-      width: auto;
       max-width: 100%;
       max-height: 100%;
+      height: auto;
+      width: auto;
       padding: 0 !important;
       /*box-shadow: 4px 5px 2px @black;*/
     }
   }
-
   .galleryBasicImgDescription {
     margin-top: 1vh;
-    padding: 15px;
-    background: @transparentBlack;
-    box-shadow: 4px 5px 2px @black;
+    padding: 5px;
     color: @white;
+    text-align: center;
+
+    box-shadow: 4px 5px 2px @black;
+    background: @transparentBlack;
     border-radius: 3px;
     border:3px solid @black;
-    text-align: center;
   }
   .active {
     opacity: 0.6;
@@ -149,7 +217,7 @@ body, #app-content {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
-  
+
   .btn {
     color: @white;
     line-height: 1.6;
@@ -166,7 +234,8 @@ body, #app-content {
   }
 
   .btn:hover {
-    background-color: @yellow;
+    background-color:  @indexHeaderRedColor;//@yellow;
+    border-radius: 0;
     opacity: 0.95;
     filter: alpha(opacity=95); /* For IE8 and earlier */
   }
@@ -232,7 +301,6 @@ img.interviewPageTplBg {
     height: 200000px;
     min-height: 100%;
     padding-top: 7%;
-    padding-left: 2%;
     color: @white;
     background-color: @niceGray;
     opacity: 0.95;
@@ -243,6 +311,13 @@ img.interviewPageTplBg {
       font-size: medium;
     }
 
+  }
+
+  .qstion {
+    padding-top: 10px;
+    margin-left: 7%;
+    padding-left: 1%;
+    padding-right: 7%;
   }
 
   .wback {
@@ -271,9 +346,11 @@ img.interviewPageTplBg {
         border-left: 5px solid @indexHeaderRedColor;
       }
       li.active{
-        border-left: 5px solid @white !important;
-        font-weight: 600;
+        background-color: @white;
         text-decoration: none;
+        a {
+          color: @niceGray;
+        }
       }
     }
 
@@ -288,10 +365,35 @@ img.interviewPageTplBg {
     -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
     transform: rotate(90deg);
   }
-
   #back:hover {
     -moz-box-shadow: 0 0 10px #ccc;
     -webkit-box-shadow: 0 0 10px #ccc;
     box-shadow: 0 0 10px #ccc;
+  }
+}
+
+.setupPage{
+  padding: 3vh;
+  text-align: center;
+  background: @transparentBlack;
+  margin:0;
+
+  img{
+    margin-right:0;
+    height: 40vh;
+    margin: 3px 1px;
+    background: @white;
+  }
+  img:hover{
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 1500px){
+  body, #app-content {
+    font-size: 90%;
+    margin: 0;
+    padding: 0;
+    overflow-x:hidden;
   }
 }
