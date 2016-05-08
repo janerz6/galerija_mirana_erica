@@ -8,8 +8,10 @@ var innerZoomConfig = {
     zoomWindowFadeOut: 750,
     responsive:true
 };
-var selectedImageIdx = 3;
+var selectedImageIdx = 1;
 var innerZoomActive = false;
+var fullscreenMode = false;
+var language = true;
 
 //Function that loads templates
 Handlebars.getTemplate = function(name) {
@@ -30,7 +32,6 @@ Handlebars.getTemplate = function(name) {
 
 //Basic routing
 $(function(){
-
     // Bind the event.
     $(window).on('hashchange',hashchanged);
 
@@ -68,7 +69,10 @@ function hashchanged(){
             testRenderedTemplate = testCompiledTemplate({data:data.interview});
             break;
         case 'galleryBasic':
-            testRenderedTemplate = testCompiledTemplate({imageList:data.images,selectedImg:data.images[selectedImageIdx]});
+            testRenderedTemplate = testCompiledTemplate({imageList:data.images,selectedImg:data.images[selectedImageIdx],language: (language)?"SI":"EN"});
+            break;
+        case 'galleryDouble':
+            testRenderedTemplate = testCompiledTemplate({images:data.setupImages});
             break;
         default :
             testRenderedTemplate = testCompiledTemplate();
@@ -80,7 +84,7 @@ function hashchanged(){
 
     if(search !== null && document.getElementById(search))
         document.getElementById(search).scrollIntoView();
-
+    $(document).add('*').off();
     registerEvents();
 
 }
@@ -89,7 +93,6 @@ $(document).ready(function(){
 
     //Init bootstrap material design
     //s$.material.init();
-    
 
 
 });

@@ -6,6 +6,7 @@
 @transparentBlack: rgba(0, 0, 0, 0.8);
 @indexHeaderRedColor: #dc211c;
 @yellow: #ECDF00;
+@overlayGray: rgba(127, 127, 127, 0.7);
 
 body, #app-content {
   min-height: 100vh;
@@ -13,21 +14,27 @@ body, #app-content {
   width: 100%;
   background-color: @lightGrey;
 }
-.btn-transparent{
+
+.btn-transparent {
   background-color: transparent !important;
   color: @white;
 }
-.btn-transparent:hover{
+
+.btn-transparent:hover {
   background-color: @transparentBlack !important;
   color: @white;
 }
+
 .basicGalleryPage {
   /*background-image: url("../images/backgrounds/betonZid.png");
   background-repeat: repeat;*/
   background-color: @transparentBlack;
   min-height: 100vh;
-  .btn-raised{font-size: 120%};
-  .changeModeBtn{
+  .btn-raised {
+    font-size: 120%
+  }
+;
+  .changeModeBtn {
     position: absolute;
     right: 0;
     font-size: 30%;
@@ -85,19 +92,19 @@ body, #app-content {
     padding: 0;
     margin: 0;
   }
-  .centerFlex{
+  .centerFlex {
     display: flex;
     /*align-items: center;*/
     justify-content: center;
   }
-  .sider{
+  .sider {
     padding: 0;
-    > div{
+    > div {
       background-color: @transparentBlack;
       padding: 10px 5px;
-      border:3px solid @black;
-      border-top:none;
-      border-bottom:none;
+      border: 3px solid @black;
+      border-top: none;
+      border-bottom: none;
       border-radius: 3px;
     }
   }
@@ -123,6 +130,7 @@ body, #app-content {
     vertical-align: center;
     height: 65vh;
     text-align: center;
+
     img{
       max-width: 100%;
       max-height: 100%;
@@ -154,7 +162,6 @@ body, #app-content {
   width: 100%;
   padding-top: 15%;
   font-family: inherit;
-
 
   h1 h3 {
     font-weight: 100;
@@ -228,13 +235,13 @@ body, #app-content {
     vertical-align: baseline;
     text-transform: inherit;
     text-align: left;
-    letter-spacing:  normal;
+    letter-spacing: normal;
     margin-bottom: auto;
     font-size: inherit;
   }
 
   .btn:hover {
-    background-color:  @indexHeaderRedColor;//@yellow;
+    background-color: @indexHeaderRedColor; //@yellow;
     border-radius: 0;
     opacity: 0.95;
     filter: alpha(opacity=95); /* For IE8 and earlier */
@@ -278,12 +285,12 @@ img.interviewPageTplBg {
   width: 100%;
 
   p {
-    text-align:justify;
+    text-align: justify;
     font-size: large;
   }
 
   h5 {
-    text-align:justify;
+    text-align: justify;
   }
 
   .bs-header {
@@ -329,8 +336,8 @@ img.interviewPageTplBg {
 
 
   /*background-image: url("../images/backgrounds/betonZid.png");*/
-  .indexContainer{
-    position:fixed;
+  .indexContainer {
+    position: fixed;
     font-size: 100%;
 
     ul {
@@ -338,16 +345,19 @@ img.interviewPageTplBg {
       align-content: center;
 
       li {
-        text-align:justify;
+        text-align: justify;
       }
 
-      li:hover{
+      li:hover {
         cursor: pointer;
         border-left: 5px solid @indexHeaderRedColor;
       }
-      li.active{
+      li.active {
         background-color: @white;
-        text-decoration: none;
+      }
+
+      li.active {
+        border-left: 5px solid @white !important;
         a {
           color: @niceGray;
         }
@@ -365,12 +375,15 @@ img.interviewPageTplBg {
     -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
     transform: rotate(90deg);
   }
+
   #back:hover {
     -moz-box-shadow: 0 0 10px #ccc;
     -webkit-box-shadow: 0 0 10px #ccc;
     box-shadow: 0 0 10px #ccc;
   }
+
 }
+
 
 .setupPage{
   padding: 3vh;
@@ -378,18 +391,143 @@ img.interviewPageTplBg {
   background: @transparentBlack;
   margin:0;
 
-  img{
-    margin-right:0;
+  img {
+    margin-right: 0;
+  }
+}
+
+
+//setup gallery page named galleryDouble.handlebars
+.setupPage {
+
+  text-align: center;
+  background: @transparentBlack;
+  margin: 0;
+  position: relative;
+
+  .doubleHeader {
+    position: relative;
+    width: 100%;
+    max-height: 15vh;
+    background-color: @indexHeaderRedColor;
+    color: @white;
+    text-align: center;
+    vertical-align: middle;
+    margin-bottom: 5vh;
+    padding: 3px;
+
+    #container:after {
+      bottom: -20px;
+    }
+
+    #container {
+      text-align: center;
+    }
+  }
+
+  .spaceRow {
+    height: 5vh;
+    width: 100%;
+    position: absolute;
+    background-color: @transparentBlack;
+  }
+
+  .doubleFooter {
+    height: 5vh;
+    width: 100%;
+    position: absolute;
+  }
+
+  .overlayScreen {
+    position: fixed;
+    width: 90vw;
+    height: 90vh;
+    background-color: @overlayGray;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    //text-align: center;
+
+    img {
+      background: @white;
+      display: block;
+      height: 75% !important;
+      width: auto;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      align-self:center;
+      position:absolute;
+    }
+
+
+    .leftRight {
+      font-size: 400%;
+      position: relative;
+      z-index: 10;
+      float:left;
+      top: 80vh;
+      bottom: 0;
+      left: 80vh;
+      right: 0;
+      margin: auto;
+      //padding-left: 5vw;
+      //opacity: 0;
+
+    }
+
+    .btnExit {
+      //display:flex;
+      white-space: normal;
+      position: relative;
+      background-color: @white;
+      max-height: 10vh;
+      max-width: 10vh;
+      float:right;
+    }
+
+  }
+
+  .centerFlex {
+    display: flex;
+    /*align-items: center;*/
+    justify-content: center;
+  }
+
+  .row {
+    padding: 0;
+    margin: 0;
+  }
+
+  .btn {
+    white-space: normal;
+    background-color: @white;
+    max-height: 10vh;
+    //margin-right: 0;
+  }
+
+  .icons {
+    font-size: 300%;
+  }
+
+  img {
+    margin-right: 0;
     height: 40vh;
     margin: 3px 1px;
     background: @white;
   }
-  img:hover{
+
+  img:hover {
     cursor: pointer;
   }
 }
 
-@media screen and (max-width: 1500px){
+
+@media screen and (max-width: 1500px) {
   body, #app-content {
     font-size: 90%;
     margin: 0;
