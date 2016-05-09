@@ -32,13 +32,14 @@ function registerEvents() {
 
     $("#back").on('click',function(){
         window.scrollTo(0, 0);
-        $('img.interviewPageTplBg').show(1000, function () {
-            history.go(-1);
-        });
+        history.go(-1);;
     });
 
-    $(document).ready( function(){
-        $('img.interviewPageTplBg').hide(2000);
+
+    $('body').scrollspy({
+        target: '.bs-docs-sidebar',
+        offset: 200
     });
+
 
 }
