@@ -11,7 +11,7 @@ var innerZoomConfig = {
 var selectedImageIdx = 1;
 var innerZoomActive = false;
 var fullscreenMode = false;
-var language = true;
+sessionStorage.language = true;
 
 //Function that loads templates
 Handlebars.getTemplate = function(name) {
@@ -67,25 +67,67 @@ function hashchanged(){
     switch(hash) {
         case 'interview':
             testRenderedTemplate = testCompiledTemplate({data:data.interview});
+
+            //Overwrite the contents of #target with the renderer HTML
+            document.getElementById('app-content').innerHTML = testRenderedTemplate;
+            $(document).add('*').off();
+            registerEvents();
             break;
         case 'galleryBasic':
-            testRenderedTemplate = testCompiledTemplate({imageList:data.images,selectedImg:data.images[selectedImageIdx],language: (language)?"SI":"EN"});
+            var img = data.images[selectedImageIdx];
+            var selectedImage;
+            if(sessionStorage.getItem("language") === "true" )
+                selectedImage = {
+                    title:img.titleSi,
+                    year:img.year,
+                    fileName:img.fileName,
+                    fileExt:img.fileExt,
+                    size:img.sizeSi,
+                    technique:img.techniqueSi,
+                    description:img.descriptionSi
+                };
+            else
+                selectedImage = {
+                    title:img.titleEn,
+                    year:img.year,
+                    fileName:img.fileName,
+                    fileExt:img.fileExt,
+                    size:img.sizeEn,
+                    technique:img.techniqueEn,
+                    description:img.descriptionEn
+                };
+            testRenderedTemplate = testCompiledTemplate({imageList:data.images,selectedImg:selectedImage,
+                language: (sessionStorage.getItem("language") === "true") ? "SI":"EN"});
+
+            //Overwrite the contents of #target with the renderer HTML
+            document.getElementById('app-content').innerHTML = testRenderedTemplate;
+            $(document).add('*').off();
+            $(document).ready(basicGalleryEvents);
+
+
             break;
         case 'galleryDouble':
             testRenderedTemplate = testCompiledTemplate({images:data.setupImages});
+            //Overwrite the contents of #target with the renderer HTML
+            document.getElementById('app-content').innerHTML = testRenderedTemplate;
+            $(document).add('*').off();
+            $(document).ready(setupGalleryEvents);
             break;
         default :
             testRenderedTemplate = testCompiledTemplate();
+            document.getElementById('app-content').innerHTML = testRenderedTemplate;
+            $(document).add('*').off();
+            registerEvents();
             break;
     }
 
     //Overwrite the contents of #target with the renderer HTML
-    document.getElementById('app-content').innerHTML = testRenderedTemplate;
-
-    if(search !== null && document.getElementById(search))
-        document.getElementById(search).scrollIntoView();
+    /*document.getElementById('app-content').innerHTML = testRenderedTemplate;
     $(document).add('*').off();
-    registerEvents();
+    registerEvents();*/
+   /* if(search !== null && document.getElementById(search))
+        document.getElementById(search).scrollIntoView();*/
+
 
 }
 

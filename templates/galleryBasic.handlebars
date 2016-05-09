@@ -7,12 +7,12 @@
                 </a>
             </div>
             <div class="col-md-10" style="padding-top:15px">
-                <h3 style="display: inline;"><b>{{selectedImg.titleSi}}</b></h3> <span style="padding-left:0.5em">({{selectedImg.year}})</span>
+                <h3 style="display: inline;"><b>{{selectedImg.title}}</b></h3> <span style="padding-left:0.5em">({{selectedImg.year}})</span>
 
             </div>
             <div class="col-md-1" style="padding-top:10px">
                 <div class="btn btn-transparent">
-                    <span style="vertical-align: middle; font-size:21px;">{{language}}</span>
+                    <div style="vertical-align: middle; font-size:21px;" id="toggleLanguage">{{language}}</div>
                     <!--<i class="material-icons icons">language</i>-->
                 </div>
             </div>
@@ -53,12 +53,12 @@
         <div class="row">
             <div class="col-md-12">
                 <div style="padding:15px 0">
-                    <i>{{selectedImg.sizeSi}}</i><br/>
-                    {{selectedImg.techniqueSi}}
+                    <i>{{selectedImg.size}}</i><br/>
+                    {{selectedImg.technique}}
 
                 </div>
                 <div style="padding: 10px 0">
-                    {{selectedImg.descriptionSi}}
+                    {{selectedImg.description}}
                 </div>
 
             </div>

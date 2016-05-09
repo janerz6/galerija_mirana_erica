@@ -3,7 +3,7 @@
  */
 var clickedImage;
 
-function doubleGalleryEvents() {
+function setupGalleryEvents() {
     //location.reload(true);
 
     $(".overlayScreen").hide();

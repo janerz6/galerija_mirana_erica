@@ -2,12 +2,14 @@
  * Created by JanezErzen on 27.4.2016.
  */
 
-
+function parseBool(value) {
+    return (value === "true") ? true : false;
+}
 function basicGalleryEvents() {
     /* basic gallery page */
 
     /* Basic gallery */
-    $("#toggleZoom").on('click', function() {
+    $("#toggleZoom").on('click', function () {
         var img = $('#image');
         if (!innerZoomActive) {
             console.log("Add zoom");
@@ -26,43 +28,43 @@ function basicGalleryEvents() {
     });
 
     //Navigacija med slikami
-    $("#nextImgBtn").on('click',nextImg);
-    $("#prevImgBtn").on('click',prevImg);
-    $("body").keydown(function(e){
+    $("#nextImgBtn").on('click', nextImg);
+    $("#prevImgBtn").on('click', prevImg);
+    $("body").keydown(function (e) {
         // left arrow
-        if ((e.keyCode || e.which) == 37)
-        {
+        if ((e.keyCode || e.which) == 37) {
             prevImg(e);
         }
         // right arrow
-        if ((e.keyCode || e.which) == 39)
-        {
+        if ((e.keyCode || e.which) == 39) {
             nextImg(e);
         }
     });
 
 
-
-    $("#fullscreenToggleBtn/*, #image*/").on('click', function () {
+    $("body").on('click', '#fullscreenToggleBtn,#image', function () {
         toggleFullscreen(800);
     });
-    setTimeout(
-        function(){
-            //Hover efect for buttons
-            $('body').on({
-                mouseenter: function() {
-                    $('.chevron').animate({opacity:1},300);
-                },
-                mouseleave: function() {
-                    $('.chevron').animate({opacity:0},300);
-                }
-            }, '#image,.chevron');
-        },
-        500
-)
 
-    $(window).on('resize',moveBtns);
+    $("#toggleLanguage").on('click', function () {
+        sessionStorage.setItem("language", sessionStorage.getItem("language") === 'true' ? false : true);
+        $(window).trigger("hashchange");
+    });
 
+
+
+    //Hover efect for buttons
+    setTimeout(moveBtns,300);
+
+    $('#image,.chevron').mouseover(function () {
+            $('.chevron').animate({opacity: 1}, 500);
+        });
+
+    $('#image,.chevron').mouseout(function () {
+            $('.chevron').animate({opacity: 0}, 500);
+        });
+
+    $(window).on('resize', moveBtns);
 }
 
 function moveBtns() {
@@ -81,7 +83,7 @@ function moveBtns() {
 function toggleFullscreen(tm) {
     var time = tm || 1200;
     //Remove zoom feature
-    if(innerZoomActive){
+    if (innerZoomActive) {
         $('.zoomContainer').remove();
         console.log("Remove zoom");
         innerZoomActive = false;
@@ -128,7 +130,7 @@ function nextImg(e) {
         $(window).trigger("hashchange");
     }
 };
-function prevImg (e) {
+function prevImg(e) {
     e.preventDefault();
     selectedImageIdx = (selectedImageIdx - 1);
     console.log(selectedImageIdx);

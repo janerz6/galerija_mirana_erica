@@ -1,0 +1,1 @@
+Sam da mapa ne zgine

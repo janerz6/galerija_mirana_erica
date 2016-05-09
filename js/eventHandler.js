@@ -3,7 +3,7 @@
  */
 
 function registerEvents() {
-    setTimeout(moveBtns, 500);
+
     // about author click
     $("#detail").on('click', function () {
         $("#bs-body").show(500);
@@ -20,9 +20,6 @@ function registerEvents() {
             paddingTop: "15%"
         }, 2000);
     });
-
-    basicGalleryEvents();
-    doubleGalleryEvents();
 
     /* Interview */
     $('.interviewPage .indexContainer a').on('click',function(e){
