@@ -43,7 +43,7 @@ function basicGalleryEvents() {
 
 
 
-    $("#fullscreenToggleBtn, #image").on('click', function () {
+    $("#fullscreenToggleBtn/*, #image*/").on('click', function () {
         toggleFullscreen(800);
     });
     setTimeout(
