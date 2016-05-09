@@ -1,5 +1,24 @@
 <div class="setupPage">
+    <div class="doubleHeader">
+        <div class="row">
+            <div class="col-md-1">
+                <a href="./" class="btn btn-transparent">
+                    <i class="material-icons icons">home</i>
+                </a>
+            </div>
+            <div class="col-md-10">
+                <h1>Postavljanje razstave</h1>
+            </div>
+        </div>
+    </div>
+    <div class="overlayScreen">
+        <i class="material-icons icons btn btnExit btn-transparent" id="exitButton">clear</i>
+        <img src="./images/setup/DSC04352.jpg" id="shownImage"/>
+        <i class="material-icons icons btn btn-transparent leftRight" id="moveLeft">chevron_left</i>
+        <i class="material-icons icons btn btn-transparent leftRight" id="moveRight">chevron_right</i>
+
+    </div>
     {{#each images}}
-        <img src="./images/setup/{{this}}">
+        <img src="./images/setup/{{this}}" class="setupImage">
     {{/each}}
 </div>

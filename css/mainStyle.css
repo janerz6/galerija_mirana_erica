@@ -340,10 +340,100 @@ img.interviewPageTplBg {
   box-shadow: 0 0 10px #ccc;
 }
 .setupPage {
-  padding: 3vh;
   text-align: center;
   background: rgba(0, 0, 0, 0.8);
   margin: 0;
+  position: relative;
+}
+.setupPage .doubleHeader {
+  position: relative;
+  width: 100%;
+  max-height: 15vh;
+  background-color: #dc211c;
+  color: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+  margin-bottom: 5vh;
+  padding: 3px;
+}
+.setupPage .doubleHeader #container:after {
+  bottom: -20px;
+}
+.setupPage .doubleHeader #container {
+  text-align: center;
+}
+.setupPage .spaceRow {
+  height: 5vh;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.setupPage .doubleFooter {
+  height: 5vh;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.setupPage .overlayScreen {
+  position: fixed;
+  width: 90vw;
+  height: 90vh;
+  background-color: rgba(127, 127, 127, 0.7);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.setupPage .overlayScreen img {
+  background: #ffffff;
+  display: block;
+  height: 75% !important;
+  width: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  align-self: center;
+  position: absolute;
+}
+.setupPage .overlayScreen .leftRight {
+  font-size: 400%;
+  position: relative;
+  max-width: 10vh;
+  z-index: 11;
+  float: left;
+  top: 80vh;
+  bottom: 0;
+  left: 80vh;
+  right: 0;
+  margin: auto;
+}
+.setupPage .overlayScreen .btnExit {
+  white-space: normal;
+  position: relative;
+  background-color: #ffffff;
+  max-height: 10vh;
+  max-width: 10vh;
+  float: right;
+}
+.setupPage .centerFlex {
+  display: flex;
+  /*align-items: center;*/
+  justify-content: center;
+}
+.setupPage .row {
+  padding: 0;
+  margin: 0;
+}
+.setupPage .btn {
+  white-space: normal;
+  background-color: #ffffff;
+  max-height: 10vh;
+}
+.setupPage .icons {
+  font-size: 300%;
 }
 .setupPage img {
   margin-right: 0;
