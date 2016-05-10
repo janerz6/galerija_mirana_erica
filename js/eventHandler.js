@@ -26,13 +26,13 @@ function registerEvents() {
         e.preventDefault();
         $(".indexContainer ul li").removeClass("active");
         $(this).parent().addClass("active");
-
-        window.scrollTo(0, $($(this).attr("href")).position().top - 5);
+        console.log("scrl");
+        window.scrollTo(0, $("#"+$(this).attr("href")).position().top - 5);
     });
 
     $("#back").on('click',function(){
         window.scrollTo(0, 0);
-        history.go(-1);;
+        history.go(-1);
     });
 
 

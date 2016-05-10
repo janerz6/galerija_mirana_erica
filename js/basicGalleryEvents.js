@@ -118,7 +118,6 @@ function toggleFullscreen(tm) {
 function nextImg(e) {
     e.preventDefault();
     selectedImageIdx = (selectedImageIdx + 1) % (data.images.length);
-    console.log(selectedImageIdx);
     if (fullscreenMode) {
         fullscreenMode = !fullscreenMode;
         //Trigger redraw
@@ -133,7 +132,6 @@ function nextImg(e) {
 function prevImg(e) {
     e.preventDefault();
     selectedImageIdx = (selectedImageIdx - 1);
-    console.log(selectedImageIdx);
     if (selectedImageIdx === -1)
         selectedImageIdx = (data.images.length - 1);
 

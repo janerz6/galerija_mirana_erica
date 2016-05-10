@@ -71,7 +71,10 @@ function hashchanged(){
             //Overwrite the contents of #target with the renderer HTML
             document.getElementById('app-content').innerHTML = testRenderedTemplate;
             $(document).add('*').off();
-            registerEvents();
+
+            if(search !== null && document.getElementById(search))
+                document.getElementById(search).scrollIntoView();
+            $(document).ready(registerEvents);
             break;
         case 'galleryBasic':
             var img = data.images[selectedImageIdx];
@@ -125,8 +128,7 @@ function hashchanged(){
     /*document.getElementById('app-content').innerHTML = testRenderedTemplate;
     $(document).add('*').off();
     registerEvents();*/
-   /* if(search !== null && document.getElementById(search))
-        document.getElementById(search).scrollIntoView();*/
+
 
 
 }
