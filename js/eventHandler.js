@@ -4,42 +4,55 @@
 
 function registerEvents() {
 
-    // about author click
-    $("#detail").on('click', function () {
-        $("#bs-body").show(500);
-        $("#bs-tail").hide(500);
-        $("#main").animate({
-            paddingTop: "5%"
-        }, 2000);
-    });
+    if(window.location.href.split("#")[1] === "galleryBasic") {
+        basicGalleryEvents();
+    }
+    else if(window.location.href.split("#")[1] === "galleryDouble") {
+        doubleGalleryEvents();
+    }
+    else{
 
-    $("#hide").on('click', function () {
-        $("#bs-body").hide(200);
-        $("#bs-tail").show(500);
-        $("#main").animate({
-            paddingTop: "15%"
-        }, 2000);
-    });
+        setTimeout(moveBtns, 500);
+        // about author click
+        $("#detail").on('click', function () {
+            $("#bs-body").show(500);
+            $("#bs-tail").hide(500);
+            $("#main").animate({
+                paddingTop: "5%"
+            }, 2000);
+        });
 
-    /* Interview */
-    $('.interviewPage .indexContainer a').on('click',function(e){
-        e.preventDefault();
-        $(".indexContainer ul li").removeClass("active");
-        $(this).parent().addClass("active");
-        console.log("scrl");
-        window.scrollTo(0, $("#"+$(this).attr("href")).position().top - 5);
-    });
+        $("#hide").on('click', function () {
+            $("#bs-body").hide(200);
+            $("#bs-tail").show(500);
+            $("#main").animate({
+                paddingTop: "15%"
+            }, 2000);
+        });
 
-    $("#back").on('click',function(){
-        window.scrollTo(0, 0);
-        history.go(-1);
-    });
+        $("#back").on('click',function(){
+            window.scrollTo(0, 0);
+            window.location.replace("./");
+        });
 
+        $('body').scrollspy({
+            target: '.bs-docs-sidebar',
+            offset: 250
+        });
 
-    $('body').scrollspy({
-        target: '.bs-docs-sidebar',
-        offset: 200
-    });
-
+        if($( window ).width() < 1024) {
+            $( ".bback" ).hide();
+            $( "div.wback" ).attr('class',  "col-md-12 col-sm-12 wback" );
+        }
+        $( window ).resize(function() {
+            if($( window ).width() < 1024) {
+                $( ".bback" ).hide();
+                $( "div.wback" ).attr('class',  "col-md-12 col-sm-12 wback" );
+            } else {
+                $( ".bback" ).show();
+                $( "div.wback" ).attr('class',  "col-md-6 col-sm-6 wback" );
+            }
+        });
+    }
 
 }

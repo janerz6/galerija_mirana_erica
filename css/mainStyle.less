@@ -6,7 +6,7 @@
 @transparentBlack: rgba(0, 0, 0, 0.8);
 @indexHeaderRedColor: #dc211c;
 @yellow: #ECDF00;
-@overlayGray: rgba(127, 127, 127, 0.7);
+@overlayGray: rgba(73, 73, 73, 0.85);
 
 body, #app-content {
   min-height: 100vh;
@@ -31,7 +31,7 @@ body, #app-content {
   background-color: @transparentBlack;
   min-height: 100vh;
   .btn-raised {
-    font-size: 120%
+    font-size: 100%
   }
 ;
   .changeModeBtn {
@@ -43,7 +43,7 @@ body, #app-content {
     height: 1vh;
   }
   .icons{
-    font-size:300%;
+    font-size:200%;
   }
   .chevron{
     font-size: 400%;
@@ -60,9 +60,7 @@ body, #app-content {
     text-align: center;
     text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
     background-color: @indexHeaderRedColor;
-    opacity: 0.9;
     max-height: 15vh;
-    filter: alpha(opacity=90); /* For IE8 and earlier */
     vertical-align: middle;
 
   }
@@ -156,7 +154,7 @@ body, #app-content {
 .firstPageTpl {
   position: fixed;
   width: 100%;
-  padding-top: 15%;
+  padding-top: 12%;
   font-family: inherit;
 
   h1 h3 {
@@ -164,7 +162,8 @@ body, #app-content {
   }
 
   p {
-    font-weight: 100;
+    font-weight: lighter;
+    font-size: 95%;
   }
 
   .bs-header {
@@ -283,7 +282,7 @@ img.interviewPageTplBg {
 
   p {
     text-align: justify;
-    font-size: large;
+    font-size: 90%;
   }
 
   h5 {
@@ -292,7 +291,7 @@ img.interviewPageTplBg {
 
   .bs-header {
     position: fixed;
-    padding: 1%;
+    padding: 0.5%;
     width: 100%;
     color: @white;
     text-align: center;
@@ -305,7 +304,7 @@ img.interviewPageTplBg {
     position: fixed;
     padding: 0;
     height: 100vh;
-    padding-top: 7%;
+    padding-top: 6%;
     margin-left: -2vh;
     color: @white;
     background-color: @niceGray;
@@ -314,20 +313,18 @@ img.interviewPageTplBg {
 
     a {
       color: @lightGrey;
-      font-size: medium;
     }
 
   }
 
   .qstion {
-    padding-top: 10px;
-    padding-left: 10%;
-    padding-right: 50%;
+    padding-left: 5%;
+    padding-right: 48%;
   }
 
   .wback {
     padding: 0;
-    padding-top: 7%;
+    padding-top: 6%;
     background-color: @white;
     opacity: 0.95;
     filter: alpha(opacity=95); /* For IE8 and earlier */
@@ -337,13 +334,14 @@ img.interviewPageTplBg {
     position: fixed;
   }
 
-  /* sidebar */
-  .bs-docs-sidebar {
-    font-size: 100%;
+  .btn {
+    margin-bottom: 0%;
   }
 
+
   .bs-docs-sidebar .nav>li>a{
-    padding-right: 15%;
+    padding-right: 13%;
+    font-size: 95%;
   }
 
   /* active*/
@@ -373,6 +371,7 @@ img.interviewPageTplBg {
     position: fixed;
     -ms-transform: rotate(90deg); /* IE 9 */
     -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
     transform: rotate(90deg);
   }
 
@@ -386,7 +385,7 @@ img.interviewPageTplBg {
 
 
 .setupPage{
-  padding: 3vh;
+  padding: 0px;
   text-align: center;
   background: @transparentBlack;
   margin:0;
@@ -413,7 +412,7 @@ img.interviewPageTplBg {
     color: @white;
     text-align: center;
     vertical-align: middle;
-    margin-bottom: 5vh;
+    margin-bottom: 1vh;
     padding: 3px;
 
     #container:after {
@@ -454,7 +453,7 @@ img.interviewPageTplBg {
     img {
       background: @white;
       display: block;
-      height: 75% !important;
+      height: 80vh;
       width: auto;
       top: 0;
       bottom: 0;
@@ -465,20 +464,29 @@ img.interviewPageTplBg {
       position:absolute;
     }
 
-
-    .leftRight {
-      font-size: 400%;
+    .left {
+      font-size: 250%;
       position: relative;
       max-width:10vh;
-      z-index: 11;
+      z-index:0;
       float:left;
-      top: 80vh;
-      bottom: 0;
-      left: 80vh;
-      right: 0;
-      margin: auto;
+      top: 40vh;
+      left: 0;
       //padding-left: 5vw;
       //opacity: 0;
+    }
+
+    .right{
+      font-size: 250%;
+      position: relative;
+      max-width:10vh;
+      z-index:0;
+      float:right;
+      top: 40vh;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
 
     }
 
@@ -486,12 +494,15 @@ img.interviewPageTplBg {
 
     .btnExit {
       //display:flex;
+      font-size: 150%;
       white-space: normal;
-      position: relative;
+      position: absolute;
       background-color: @white;
       max-height: 10vh;
       max-width: 10vh;
       float:right;
+      top: 0;
+      right: 0;
     }
 
   }
@@ -511,11 +522,12 @@ img.interviewPageTplBg {
     white-space: normal;
     background-color: @white;
     max-height: 10vh;
+    margin-bottom: 0%;
     //margin-right: 0;
   }
 
   .icons {
-    font-size: 300%;
+    font-size: 200%;
   }
 
   img {
@@ -534,7 +546,6 @@ img.interviewPageTplBg {
 
 @media screen and (max-width: 1500px) {
   body, #app-content {
-    font-size: 90%;
     margin: 0;
     padding: 0;
     overflow-x:hidden;
