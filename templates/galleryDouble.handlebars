@@ -14,11 +14,11 @@
     <div class="overlayScreen">
         <i class="material-icons icons btn btnExit btn-transparent" id="exitButton">clear</i>
         <img src="./images/setup/DSC04352.jpg" id="shownImage"/>
-        <i class="material-icons icons btn btn-transparent leftRight" id="moveLeft">chevron_left</i>
-        <i class="material-icons icons btn btn-transparent leftRight" id="moveRight">chevron_right</i>
+        <i class="material-icons icons btn btn-transparent left" id="moveLeft">chevron_left</i>
+        <i class="material-icons icons btn btn-transparent right" id="moveRight">chevron_right</i>
 
     </div>
     {{#each images}}
-        <img src="./images/setup/{{this}}" class="setupImage">
+        <img src="./images/setup/{{this}}" class="setupImage" name="{{@index}}">
     {{/each}}
 </div>

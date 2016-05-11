@@ -378,7 +378,7 @@ img.interviewPageTplBg {
   position: fixed;
   width: 90vw;
   height: 90vh;
-  background-color: rgba(127, 127, 127, 0.7);
+  background-color: rgba(73, 73, 73, 0.85);
   top: 0;
   bottom: 0;
   left: 0;
@@ -388,7 +388,7 @@ img.interviewPageTplBg {
 .setupPage .overlayScreen img {
   background: #ffffff;
   display: block;
-  height: 75% !important;
+  height: 80vh;
   width: auto;
   top: 0;
   bottom: 0;
@@ -398,25 +398,36 @@ img.interviewPageTplBg {
   align-self: center;
   position: absolute;
 }
-.setupPage .overlayScreen .leftRight {
+.setupPage .overlayScreen .left {
   font-size: 400%;
   position: relative;
   max-width: 10vh;
-  z-index: 11;
+  z-index: 0;
   float: left;
-  top: 80vh;
+  top: 40vh;
+  left: 0;
+}
+.setupPage .overlayScreen .right {
+  font-size: 400%;
+  position: relative;
+  max-width: 10vh;
+  z-index: 0;
+  float: right;
+  top: 40vh;
   bottom: 0;
-  left: 80vh;
+  left: 0;
   right: 0;
   margin: auto;
 }
 .setupPage .overlayScreen .btnExit {
   white-space: normal;
-  position: relative;
+  position: absolute;
   background-color: #ffffff;
   max-height: 10vh;
   max-width: 10vh;
   float: right;
+  top: 0;
+  right: 0;
 }
 .setupPage .centerFlex {
   display: flex;

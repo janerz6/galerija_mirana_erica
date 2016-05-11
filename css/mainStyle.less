@@ -6,7 +6,7 @@
 @transparentBlack: rgba(0, 0, 0, 0.8);
 @indexHeaderRedColor: #dc211c;
 @yellow: #ECDF00;
-@overlayGray: rgba(127, 127, 127, 0.7);
+@overlayGray: rgba(73, 73, 73, 0.85);
 
 body, #app-content {
   min-height: 100vh;
@@ -426,7 +426,7 @@ img.interviewPageTplBg {
     img {
       background: @white;
       display: block;
-      height: 75% !important;
+      height: 80vh;
       width: auto;
       top: 0;
       bottom: 0;
@@ -438,19 +438,29 @@ img.interviewPageTplBg {
     }
 
 
-    .leftRight {
+    .left {
       font-size: 400%;
       position: relative;
       max-width:10vh;
-      z-index: 11;
+      z-index:0;
       float:left;
-      top: 80vh;
-      bottom: 0;
-      left: 80vh;
-      right: 0;
-      margin: auto;
+      top: 40vh;
+      left: 0;
       //padding-left: 5vw;
       //opacity: 0;
+    }
+
+    .right{
+      font-size: 400%;
+      position: relative;
+      max-width:10vh;
+      z-index:0;
+      float:right;
+      top: 40vh;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
 
     }
 
@@ -459,11 +469,13 @@ img.interviewPageTplBg {
     .btnExit {
       //display:flex;
       white-space: normal;
-      position: relative;
+      position: absolute;
       background-color: @white;
       max-height: 10vh;
       max-width: 10vh;
       float:right;
+      top: 0;
+      right: 0;
     }
 
   }
