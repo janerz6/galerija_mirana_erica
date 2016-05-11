@@ -31,7 +31,7 @@ body, #app-content {
   background-color: @transparentBlack;
   min-height: 100vh;
   .btn-raised {
-    font-size: 120%
+    font-size: 100%
   }
 ;
   .changeModeBtn {
@@ -43,7 +43,7 @@ body, #app-content {
     height: 1vh;
   }
   .icons{
-    font-size:300%;
+    font-size:200%;
   }
   .chevron{
     font-size: 400%;
@@ -60,9 +60,7 @@ body, #app-content {
     text-align: center;
     text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
     background-color: @indexHeaderRedColor;
-    opacity: 0.9;
     max-height: 15vh;
-    filter: alpha(opacity=90); /* For IE8 and earlier */
     vertical-align: middle;
 
   }
@@ -164,7 +162,7 @@ body, #app-content {
   }
 
   p {
-    font-weight: 100;
+    font-weight: 50;
   }
 
   .bs-header {
@@ -283,7 +281,7 @@ img.interviewPageTplBg {
 
   p {
     text-align: justify;
-    font-size: large;
+    font-size: 90%;
   }
 
   h5 {
@@ -292,7 +290,7 @@ img.interviewPageTplBg {
 
   .bs-header {
     position: fixed;
-    padding: 1%;
+    padding: 0.5%;
     width: 100%;
     color: @white;
     text-align: center;
@@ -314,7 +312,6 @@ img.interviewPageTplBg {
 
     a {
       color: @lightGrey;
-      font-size: medium;
     }
 
   }
@@ -336,13 +333,14 @@ img.interviewPageTplBg {
     position: fixed;
   }
 
-  /* sidebar */
-  .bs-docs-sidebar {
-    font-size: 100%;
+  .btn {
+    margin-bottom: 0%;
   }
 
+
   .bs-docs-sidebar .nav>li>a{
-    padding-right: 15%;
+    padding-right: 13%;
+    font-size: 95%;
   }
 
   /* active*/
@@ -465,7 +463,7 @@ img.interviewPageTplBg {
 
 
     .leftRight {
-      font-size: 400%;
+      font-size: 300%;
       position: relative;
       z-index: 10;
       float:left;
@@ -529,7 +527,6 @@ img.interviewPageTplBg {
 
 @media screen and (max-width: 1500px) {
   body, #app-content {
-    font-size: 90%;
     margin: 0;
     padding: 0;
     overflow-x:hidden;

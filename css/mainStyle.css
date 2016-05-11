@@ -21,7 +21,7 @@ body,
   min-height: 100vh;
 }
 .basicGalleryPage .btn-raised {
-  font-size: 120%;
+  font-size: 100%;
 }
 .basicGalleryPage .changeModeBtn {
   position: absolute;
@@ -32,7 +32,7 @@ body,
   height: 1vh;
 }
 .basicGalleryPage .icons {
-  font-size: 300%;
+  font-size: 200%;
 }
 .basicGalleryPage .chevron {
   font-size: 400%;
@@ -49,10 +49,7 @@ body,
   text-align: center;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
   background-color: #dc211c;
-  opacity: 0.9;
   max-height: 15vh;
-  filter: alpha(opacity=90);
-  /* For IE8 and earlier */
   vertical-align: middle;
 }
 .basicGalleryPage .bs-footer {
@@ -150,7 +147,7 @@ body,
   font-weight: 100;
 }
 .firstPageTpl p {
-  font-weight: 100;
+  font-weight: 50;
 }
 .firstPageTpl .bs-header {
   position: relative;
@@ -260,19 +257,18 @@ img.interviewPageTplBg {
 .interviewPage {
   width: 100%;
   background-color: #ffffff;
-  /* sidebar */
   /* active*/
 }
 .interviewPage p {
   text-align: justify;
-  font-size: large;
+  font-size: 90%;
 }
 .interviewPage h5 {
   text-align: justify;
 }
 .interviewPage .bs-header {
   position: fixed;
-  padding: 1%;
+  padding: 0.5%;
   width: 100%;
   color: #ffffff;
   text-align: center;
@@ -294,7 +290,6 @@ img.interviewPageTplBg {
 }
 .interviewPage .bback a {
   color: #e8f5e9;
-  font-size: medium;
 }
 .interviewPage .qstion {
   padding-left: 5%;
@@ -311,11 +306,12 @@ img.interviewPageTplBg {
 .interviewPage .fixed {
   position: fixed;
 }
-.interviewPage .bs-docs-sidebar {
-  font-size: 100%;
+.interviewPage .btn {
+  margin-bottom: 0%;
 }
 .interviewPage .bs-docs-sidebar .nav > li > a {
-  padding-right: 15%;
+  padding-right: 13%;
+  font-size: 95%;
 }
 .interviewPage .bs-docs-sidebar .nav > li > a:hover,
 .interviewPage .bs-docs-sidebar .nav > .active > a {
@@ -415,7 +411,7 @@ img.interviewPageTplBg {
   position: absolute;
 }
 .setupPage .overlayScreen .leftRight {
-  font-size: 400%;
+  font-size: 300%;
   position: relative;
   z-index: 10;
   float: left;
@@ -462,7 +458,6 @@ img.interviewPageTplBg {
 @media screen and (max-width: 1500px) {
   body,
   #app-content {
-    font-size: 90%;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
