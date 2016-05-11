@@ -140,14 +140,15 @@ body,
 .firstPageTpl {
   position: fixed;
   width: 100%;
-  padding-top: 15%;
+  padding-top: 12%;
   font-family: inherit;
 }
 .firstPageTpl h1 h3 {
   font-weight: 100;
 }
 .firstPageTpl p {
-  font-weight: 50;
+  font-weight: lighter;
+  font-size: 95%;
 }
 .firstPageTpl .bs-header {
   position: relative;

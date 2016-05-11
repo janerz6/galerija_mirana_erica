@@ -45,9 +45,6 @@ function registerEvents() {
         if($( window ).width() < 1024) {
             $( ".bback" ).hide();
             $( "div.wback" ).attr('class',  "col-md-12 col-sm-12 wback" );
-        } else {
-            $( ".bback" ).show();
-            $( "div.wback" ).attr('class',  "col-md-6 col-sm-6 wback" );
         }
         $( window ).resize(function() {
             if($( window ).width() < 1024) {
