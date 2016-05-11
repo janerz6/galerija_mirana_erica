@@ -386,6 +386,7 @@ img.interviewPageTplBg {
   height: 5vh;
   width: 100%;
   position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 .setupPage .overlayScreen {
   position: fixed;
@@ -414,7 +415,8 @@ img.interviewPageTplBg {
 .setupPage .overlayScreen .leftRight {
   font-size: 300%;
   position: relative;
-  z-index: 10;
+  max-width: 10vh;
+  z-index: 11;
   float: left;
   top: 80vh;
   bottom: 0;
