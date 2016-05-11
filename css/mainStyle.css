@@ -335,6 +335,7 @@ img.interviewPageTplBg {
   position: fixed;
   -ms-transform: rotate(90deg);
   /* IE 9 */
+  /* Chrome, Safari, Opera */
   -webkit-transform: rotate(90deg);
   /* Chrome, Safari, Opera */
   transform: rotate(90deg);
@@ -345,7 +346,7 @@ img.interviewPageTplBg {
   box-shadow: 0 0 10px #ccc;
 }
 .setupPage {
-  padding: 3vh;
+  padding: 0px;
   text-align: center;
   background: rgba(0, 0, 0, 0.8);
   margin: 0;
@@ -367,7 +368,7 @@ img.interviewPageTplBg {
   color: #ffffff;
   text-align: center;
   vertical-align: middle;
-  margin-bottom: 5vh;
+  margin-bottom: 1vh;
   padding: 3px;
 }
 .setupPage .doubleHeader #container:after {
@@ -392,7 +393,7 @@ img.interviewPageTplBg {
   position: fixed;
   width: 90vw;
   height: 90vh;
-  background-color: rgba(127, 127, 127, 0.7);
+  background-color: rgba(73, 73, 73, 0.85);
   top: 0;
   bottom: 0;
   left: 0;
@@ -402,7 +403,7 @@ img.interviewPageTplBg {
 .setupPage .overlayScreen img {
   background: #ffffff;
   display: block;
-  height: 75% !important;
+  height: 80vh;
   width: auto;
   top: 0;
   bottom: 0;
@@ -412,25 +413,37 @@ img.interviewPageTplBg {
   align-self: center;
   position: absolute;
 }
-.setupPage .overlayScreen .leftRight {
-  font-size: 300%;
+.setupPage .overlayScreen .left {
+  font-size: 250%;
   position: relative;
   max-width: 10vh;
-  z-index: 11;
+  z-index: 0;
   float: left;
-  top: 80vh;
+  top: 40vh;
+  left: 0;
+}
+.setupPage .overlayScreen .right {
+  font-size: 250%;
+  position: relative;
+  max-width: 10vh;
+  z-index: 0;
+  float: right;
+  top: 40vh;
   bottom: 0;
-  left: 80vh;
+  left: 0;
   right: 0;
   margin: auto;
 }
 .setupPage .overlayScreen .btnExit {
+  font-size: 150%;
   white-space: normal;
-  position: relative;
+  position: absolute;
   background-color: #ffffff;
   max-height: 10vh;
   max-width: 10vh;
   float: right;
+  top: 0;
+  right: 0;
 }
 .setupPage .centerFlex {
   display: flex;
@@ -445,9 +458,10 @@ img.interviewPageTplBg {
   white-space: normal;
   background-color: #ffffff;
   max-height: 10vh;
+  margin-bottom: 0%;
 }
 .setupPage .icons {
-  font-size: 300%;
+  font-size: 200%;
 }
 .setupPage img {
   margin-right: 0;
