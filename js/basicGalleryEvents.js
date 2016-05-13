@@ -54,7 +54,7 @@ function basicGalleryEvents() {
 
 
     //Hover efect for buttons
-    setTimeout(moveBtns,300);
+    setInterval(moveBtns,500);
 
     $('#image,.chevron').mouseover(function () {
             $('.chevron').animate({opacity: 1}, 500);
